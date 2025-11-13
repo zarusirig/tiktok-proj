@@ -2,6 +2,8 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { Card } from '@/components/ui/Card';
 import { FAQSection } from '@/components/calculator/FAQSection';
+import { ArticleSchema } from '@/components/seo/CalculatorSchema';
+import { PageAuthorByline, PageEEAT } from '@/lib/eeat/page-eeat';
 
 export const metadata: Metadata = {
   title: 'TikTok Creator Fund: Complete Guide (Rates, Requirements, Payment) 2025',
@@ -11,27 +13,41 @@ export const metadata: Metadata = {
 
 export default function CreatorFundGuidePage() {
   return (
-    <div className="min-h-screen bg-neutral-50 py-12">
-      <div className="container-custom max-w-4xl">
-        <nav className="flex items-center space-x-2 text-body-sm mb-6">
-          <Link href="/" className="text-neutral-600 hover:text-primary-600">Home</Link>
-          <span className="text-neutral-400">→</span>
-          <Link href="/guides" className="text-neutral-600 hover:text-primary-600">Guides</Link>
-          <span className="text-neutral-400">→</span>
-          <span className="text-neutral-900 font-medium">TikTok Creator Fund Guide</span>
-        </nav>
+    <>
+      {/* Article Schema for SEO */}
+      <ArticleSchema
+        headline="TikTok Creator Fund: Complete Guide (2025)"
+        description="Everything you need to know about the TikTok Creator Fund: RPM rates, eligibility requirements, payment schedule, realistic earnings, and optimization strategies."
+        url="https://tiktokcalculator.com/guides/tiktok-creator-fund"
+        datePublished="2024-01-15"
+        dateModified="2025-11-13"
+        keywords={['tiktok creator fund', 'creator fund rates', 'tiktok rpm', 'creator fund requirements', 'tiktok earnings']}
+      />
 
-        <h1 className="text-display-md md:text-display-lg font-bold text-neutral-900 mb-4">
-          TikTok Creator Fund: Complete Guide (2025)
-        </h1>
-        <p className="text-body-lg text-neutral-600 mb-4">
-          Everything you need to know about the TikTok Creator Fund: RPM rates, eligibility requirements, payment schedule, realistic earnings, and optimization strategies.
-        </p>
-        <div className="flex items-center space-x-4 text-body-sm text-neutral-600 mb-12">
-          <span>📝 25 min read</span>
-          <span>•</span>
-          <span>Last updated: November 13, 2025</span>
-        </div>
+      <div className="min-h-screen bg-neutral-50 py-12">
+        <div className="container-custom max-w-4xl">
+          <nav className="flex items-center space-x-2 text-body-sm mb-6">
+            <Link href="/" className="text-neutral-600 hover:text-primary-600">Home</Link>
+            <span className="text-neutral-400">→</span>
+            <Link href="/guides" className="text-neutral-600 hover:text-primary-600">Guides</Link>
+            <span className="text-neutral-400">→</span>
+            <span className="text-neutral-900 font-medium">TikTok Creator Fund Guide</span>
+          </nav>
+
+          <h1 className="text-display-md md:text-display-lg font-bold text-neutral-900 mb-4">
+            TikTok Creator Fund: Complete Guide (2025)
+          </h1>
+          <p className="text-body-lg text-neutral-600 mb-4">
+            Everything you need to know about the TikTok Creator Fund: RPM rates, eligibility requirements, payment schedule, realistic earnings, and optimization strategies.
+          </p>
+          <div className="flex items-center space-x-4 text-body-sm text-neutral-600 mb-8">
+            <span>📝 25 min read</span>
+            <span>•</span>
+            <span>Last updated: November 13, 2025</span>
+          </div>
+
+          {/* Author Byline */}
+          <PageAuthorByline pageSlug="tiktok-creator-fund-guide" />
 
         {/* Quick Summary Card */}
         <Card className="mb-12 bg-primary-50 border border-primary-200">
@@ -294,8 +310,14 @@ export default function CreatorFundGuidePage() {
             },
           ]}
         />
+
+        {/* E-E-A-T Section */}
+        <div className="mt-12">
+          <PageEEAT pageSlug="tiktok-creator-fund-guide" variant="full" />
+        </div>
       </div>
     </div>
+    </>
   );
 }
 

@@ -10,6 +10,7 @@ import { MethodologySection } from '@/components/calculator/MethodologySection';
 import { FAQSection } from '@/components/calculator/FAQSection';
 import { RelatedCalculators } from '@/components/calculator/RelatedCalculators';
 import { CalculatorSchema, FAQSchema, BreadcrumbSchema } from '@/components/seo/CalculatorSchema';
+import { PageAuthorByline, PageEEAT } from '@/lib/eeat/page-eeat';
 import {
   calculateCreatorFund,
   validateCreatorFundInput,
@@ -133,6 +134,11 @@ export default function CreatorFundCalculatorPage() {
           <p className="text-body-lg text-neutral-600 max-w-2xl mx-auto">
             Estimate your monthly and annual earnings from the TikTok Creator Fund based on your views, engagement rate, and content niche.
           </p>
+        </div>
+
+        {/* Author Byline with Expert Review Badge */}
+        <div className="max-w-5xl mx-auto mb-8">
+          <PageAuthorByline pageSlug="tiktok-creator-fund" />
         </div>
 
         <div className="max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
@@ -411,6 +417,11 @@ Monthly earnings: (500 × $0.036) = $18.00`}
               },
             ]}
           />
+
+          {/* E-E-A-T Section: Author Bio, Review Info, Citations, Disclaimers */}
+          <div className="mt-12">
+            <PageEEAT pageSlug="tiktok-creator-fund" variant="full" />
+          </div>
         </div>
       </div>
     </div>
