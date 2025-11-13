@@ -12,7 +12,27 @@ export type CalculatorType =
   | 'coins'
   | 'rpm'
   | 'shop-commission'
-  | 'money';
+  | 'money'
+  | 'follower-growth'
+  | 'video-performance'
+  | 'watch-time'
+  | 'completion-rate'
+  | 'viral-potential'
+  | 'sponsorship-roi'
+  | 'content-value'
+  | 'break-even'
+  | 'creator-tax'
+  | 'multi-platform-earnings'
+  | 'share-ratio'
+  | 'save-rate'
+  | 'profile-visit-rate'
+  | 'hashtag-performance'
+  | 'posting-time'
+  | 'production-cost'
+  | 'niche-profitability'
+  | 'content-calendar-roi'
+  | 'follower-conversion'
+  | 'ad-revenue';
 
 // Content Niches
 export type ContentNiche =
@@ -230,4 +250,310 @@ export interface MoneyCalculatorResult extends CalculatorResult {
     value: number;
     percentage: number;
   }[];
+}
+
+// Follower Growth Input
+export interface FollowerGrowthInput {
+  currentFollowers: number;
+  dailyGrowthRate: number;
+  projectionDays: number;
+}
+
+// Follower Growth Result
+export interface FollowerGrowthResult extends CalculatorResult {
+  projectedFollowers: number;
+  totalGrowth: number;
+  growthPercentage: number;
+  dailyAverage: number;
+}
+
+// Video Performance Input
+export interface VideoPerformanceInput {
+  avgViews: number;
+  avgLikes: number;
+  avgComments: number;
+  avgShares: number;
+  followers: number;
+}
+
+// Video Performance Result
+export interface VideoPerformanceResult extends CalculatorResult {
+  performanceScore: number;
+  rating: 'excellent' | 'good' | 'average' | 'below-average';
+  viewToFollowerRatio: number;
+}
+
+// Watch Time Input
+export interface WatchTimeInput {
+  videoDuration: number;
+  avgWatchTime: number;
+  views: number;
+}
+
+// Watch Time Result
+export interface WatchTimeResult extends CalculatorResult {
+  retentionRate: number;
+  totalWatchHours: number;
+  rating: 'excellent' | 'good' | 'average' | 'below-average';
+}
+
+// Completion Rate Input
+export interface CompletionRateInput {
+  videoDuration: number;
+  avgWatchTime: number;
+}
+
+// Completion Rate Result
+export interface CompletionRateResult extends CalculatorResult {
+  completionRate: number;
+  rating: 'excellent' | 'good' | 'average' | 'below-average';
+}
+
+// Viral Potential Input
+export interface ViralPotentialInput {
+  followers: number;
+  engagementRate: number;
+  shareRate: number;
+  saveRate: number;
+  completionRate: number;
+}
+
+// Viral Potential Result
+export interface ViralPotentialResult extends CalculatorResult {
+  viralScore: number;
+  viralChance: 'very-high' | 'high' | 'medium' | 'low';
+  factors: { label: string; score: number }[];
+}
+
+// Sponsorship ROI Input
+export interface SponsorshipROIInput {
+  sponsorshipFee: number;
+  productionCost: number;
+  expectedReach: number;
+  conversionRate: number;
+  avgOrderValue: number;
+}
+
+// Sponsorship ROI Result
+export interface SponsorshipROIResult extends CalculatorResult {
+  totalRevenue: number;
+  totalCost: number;
+  roi: number;
+  roiPercentage: number;
+  breakEvenUnits: number;
+}
+
+// Content Value Input
+export interface ContentValueInput {
+  totalVideos: number;
+  avgViewsPerVideo: number;
+  engagementRate: number;
+  niche: ContentNiche;
+}
+
+// Content Value Result
+export interface ContentValueResult extends CalculatorResult {
+  estimatedValue: number;
+  valuePerVideo: number;
+  totalReach: number;
+}
+
+// Break Even Input
+export interface BreakEvenInput {
+  adSpend: number;
+  costPerClick: number;
+  conversionRate: number;
+  productPrice: number;
+  productCost: number;
+}
+
+// Break Even Result
+export interface BreakEvenResult extends CalculatorResult {
+  breakEvenUnits: number;
+  breakEvenRevenue: number;
+  requiredClicks: number;
+  requiredConversions: number;
+}
+
+// Creator Tax Input
+export interface CreatorTaxInput {
+  annualIncome: number;
+  state: string;
+  filingStatus: 'single' | 'married' | 'head-of-household';
+  businessExpenses: number;
+}
+
+// Creator Tax Result
+export interface CreatorTaxResult extends CalculatorResult {
+  federalTax: number;
+  stateTax: number;
+  selfEmploymentTax: number;
+  totalTax: number;
+  effectiveTaxRate: number;
+  netIncome: number;
+}
+
+// Multi-Platform Earnings Input
+export interface MultiPlatformEarningsInput {
+  tiktokFollowers: number;
+  youtubeSubscribers: number;
+  instagramFollowers: number;
+  monthlyViews: { tiktok: number; youtube: number; instagram: number };
+}
+
+// Multi-Platform Earnings Result
+export interface MultiPlatformEarningsResult extends CalculatorResult {
+  tiktokEarnings: { min: number; max: number };
+  youtubeEarnings: { min: number; max: number };
+  instagramEarnings: { min: number; max: number };
+  totalEarnings: { min: number; max: number };
+  bestPlatform: 'tiktok' | 'youtube' | 'instagram';
+}
+
+// Share Ratio Input
+export interface ShareRatioInput {
+  views: number;
+  shares: number;
+}
+
+// Share Ratio Result
+export interface ShareRatioResult extends CalculatorResult {
+  shareRatio: number;
+  viralityRating: 'excellent' | 'good' | 'average' | 'below-average';
+}
+
+// Save Rate Input
+export interface SaveRateInput {
+  views: number;
+  saves: number;
+}
+
+// Save Rate Result
+export interface SaveRateResult extends CalculatorResult {
+  saveRate: number;
+  contentValueRating: 'excellent' | 'good' | 'average' | 'below-average';
+}
+
+// Profile Visit Rate Input
+export interface ProfileVisitRateInput {
+  views: number;
+  profileVisits: number;
+  followers: number;
+}
+
+// Profile Visit Rate Result
+export interface ProfileVisitRateResult extends CalculatorResult {
+  visitRate: number;
+  conversionRate: number;
+  rating: 'excellent' | 'good' | 'average' | 'below-average';
+}
+
+// Hashtag Performance Input
+export interface HashtagPerformanceInput {
+  baselineViews: number;
+  hashtagViews: number;
+  hashtagEngagement: number;
+  baselineEngagement: number;
+}
+
+// Hashtag Performance Result
+export interface HashtagPerformanceResult extends CalculatorResult {
+  viewLift: number;
+  engagementLift: number;
+  effectivenessScore: number;
+  rating: 'highly-effective' | 'effective' | 'neutral' | 'ineffective';
+}
+
+// Posting Time Input
+export interface PostingTimeInput {
+  timezone: string;
+  audienceRegion: string;
+  contentType: 'entertainment' | 'educational' | 'promotional' | 'inspirational';
+}
+
+// Posting Time Result
+export interface PostingTimeResult extends CalculatorResult {
+  optimalTimes: { time: string; score: number; reason: string }[];
+  worstTimes: { time: string; reason: string }[];
+}
+
+// Production Cost Input
+export interface ProductionCostInput {
+  equipmentCost: number;
+  softwareCost: number;
+  timePerVideo: number;
+  hourlyRate: number;
+  videosPerMonth: number;
+}
+
+// Production Cost Result
+export interface ProductionCostResult extends CalculatorResult {
+  costPerVideo: number;
+  monthlyCost: number;
+  annualCost: number;
+  breakEvenViews: number;
+}
+
+// Niche Profitability Input
+export interface NicheProfitabilityInput {
+  niche: ContentNiche;
+  followers: number;
+  monthlyViews: number;
+  engagementRate: number;
+}
+
+// Niche Profitability Result
+export interface NicheProfitabilityResult extends CalculatorResult {
+  estimatedMonthlyEarnings: { min: number; max: number };
+  nicheMultiplier: number;
+  nichRanking: number;
+  recommendation: string;
+}
+
+// Content Calendar ROI Input
+export interface ContentCalendarROIInput {
+  hoursSpentPlanning: number;
+  hourlyRate: number;
+  videosPlanned: number;
+  avgPerformanceIncrease: number;
+  avgRevenuePerVideo: number;
+}
+
+// Content Calendar ROI Result
+export interface ContentCalendarROIResult extends CalculatorResult {
+  planningCost: number;
+  additionalRevenue: number;
+  roi: number;
+  roiPercentage: number;
+}
+
+// Follower Conversion Input
+export interface FollowerConversionInput {
+  followers: number;
+  websiteClicks: number;
+  purchases: number;
+  avgOrderValue: number;
+}
+
+// Follower Conversion Result
+export interface FollowerConversionResult extends CalculatorResult {
+  clickThroughRate: number;
+  conversionRate: number;
+  overallConversionRate: number;
+  revenue: number;
+  revenuePerFollower: number;
+}
+
+// Ad Revenue Input
+export interface AdRevenueInput {
+  monthlyViews: number;
+  cpm: number;
+  adFrequency: number;
+}
+
+// Ad Revenue Result
+export interface AdRevenueResult extends CalculatorResult {
+  monthlyRevenue: number;
+  annualRevenue: number;
+  revenuePerVideo: number;
 }

@@ -3,12 +3,13 @@ import Link from 'next/link';
 import { Card } from '@/components/ui/Card';
 
 export const metadata: Metadata = {
-  title: 'All TikTok Calculators',
-  description: 'Free TikTok calculators for creators: Creator Fund, engagement rate, brand deal rates, LIVE gifts, coins, RPM, Shop commissions, and total earnings.',
+  title: 'All TikTok Calculators - 28 Free Tools for Creators',
+  description: 'Complete suite of 28 free TikTok calculators: earnings, growth, engagement, ROI, taxes, and more. Data-driven tools to optimize your creator business.',
 };
 
 export default function CalculatorsPage() {
   const calculators = [
+    // Original 8 Calculators
     {
       name: 'Creator Fund Calculator',
       slug: 'tiktok-creator-fund',
@@ -69,9 +70,156 @@ export default function CalculatorsPage() {
       icon: '🛍️',
       category: 'Shop',
     },
+    // Growth & Analytics (5 new)
+    {
+      name: 'Follower Growth Calculator',
+      slug: 'follower-growth',
+      description: 'Project your future follower count based on current growth rate and trends.',
+      icon: '📈',
+      category: 'Growth',
+      popular: true,
+    },
+    {
+      name: 'Video Performance Predictor',
+      slug: 'video-performance',
+      description: 'Predict video performance and get a comprehensive performance score based on key metrics.',
+      icon: '🎯',
+      category: 'Analytics',
+    },
+    {
+      name: 'Watch Time Calculator',
+      slug: 'watch-time',
+      description: 'Calculate average watch time, retention rate, and total watch hours for your content.',
+      icon: '⏱️',
+      category: 'Analytics',
+    },
+    {
+      name: 'Completion Rate Calculator',
+      slug: 'completion-rate',
+      description: 'Measure what percentage of your videos viewers watch to completion.',
+      icon: '✅',
+      category: 'Analytics',
+    },
+    {
+      name: 'Viral Potential Calculator',
+      slug: 'viral-potential',
+      description: 'Score your content\'s viral potential based on engagement, shares, saves, and completion rate.',
+      icon: '🚀',
+      category: 'Analytics',
+      popular: true,
+    },
+    // Monetization & ROI (5 new)
+    {
+      name: 'Sponsorship ROI Calculator',
+      slug: 'sponsorship-roi',
+      description: 'Calculate the return on investment for brand sponsorship deals and partnerships.',
+      icon: '💼',
+      category: 'ROI',
+    },
+    {
+      name: 'Content Value Calculator',
+      slug: 'content-value',
+      description: 'Estimate the total monetary value of your content library for licensing and deals.',
+      icon: '💎',
+      category: 'Earnings',
+    },
+    {
+      name: 'Break-Even Calculator',
+      slug: 'break-even',
+      description: 'Calculate how many sales you need to break even on paid promotions and ad spend.',
+      icon: '⚖️',
+      category: 'Business',
+    },
+    {
+      name: 'Creator Tax Calculator',
+      slug: 'creator-tax',
+      description: 'Estimate your tax obligations including federal, state, and self-employment taxes.',
+      icon: '🧾',
+      category: 'Business',
+      popular: true,
+    },
+    {
+      name: 'Multi-Platform Earnings',
+      slug: 'multi-platform-earnings',
+      description: 'Compare earning potential across TikTok, YouTube, and Instagram to optimize your strategy.',
+      icon: '📱',
+      category: 'Earnings',
+    },
+    // Engagement Metrics (5 new)
+    {
+      name: 'Share-to-View Ratio',
+      slug: 'share-ratio',
+      description: 'Measure your content\'s viral potential through share rate analysis.',
+      icon: '🔄',
+      category: 'Engagement',
+    },
+    {
+      name: 'Save Rate Calculator',
+      slug: 'save-rate',
+      description: 'Calculate your save rate to understand content value and algorithm favorability.',
+      icon: '💾',
+      category: 'Engagement',
+    },
+    {
+      name: 'Profile Visit Rate',
+      slug: 'profile-visit-rate',
+      description: 'Track how effectively your content drives profile visits and new followers.',
+      icon: '👤',
+      category: 'Engagement',
+    },
+    {
+      name: 'Hashtag Performance',
+      slug: 'hashtag-performance',
+      description: 'Analyze hashtag effectiveness by comparing performance with and without specific tags.',
+      icon: '#️⃣',
+      category: 'Analytics',
+    },
+    {
+      name: 'Best Posting Time',
+      slug: 'posting-time',
+      description: 'Find your optimal posting times based on audience region and content type.',
+      icon: '🕐',
+      category: 'Analytics',
+    },
+    // Business Planning (5 new)
+    {
+      name: 'Production Cost Calculator',
+      slug: 'production-cost',
+      description: 'Calculate your true cost per video including equipment, time, and overhead.',
+      icon: '🎬',
+      category: 'Business',
+    },
+    {
+      name: 'Niche Profitability',
+      slug: 'niche-profitability',
+      description: 'Compare earning potential across different content niches to optimize your strategy.',
+      icon: '🎭',
+      category: 'Business',
+    },
+    {
+      name: 'Content Calendar ROI',
+      slug: 'content-calendar-roi',
+      description: 'Calculate the return on investment for strategic content planning.',
+      icon: '📅',
+      category: 'ROI',
+    },
+    {
+      name: 'Follower Conversion',
+      slug: 'follower-conversion',
+      description: 'Track e-commerce conversion rates from followers to customers.',
+      icon: '🛒',
+      category: 'Business',
+    },
+    {
+      name: 'Ad Revenue Calculator',
+      slug: 'ad-revenue',
+      description: 'Estimate potential ad revenue from TikTok\'s monetization programs.',
+      icon: '💸',
+      category: 'Earnings',
+    },
   ];
 
-  const categories = ['All', 'Earnings', 'Analytics', 'LIVE', 'Shop', 'Conversion'];
+  const categories = ['All', 'Earnings', 'Analytics', 'Growth', 'Engagement', 'Business', 'ROI', 'LIVE', 'Shop', 'Conversion'];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-neutral-50 via-white to-primary-50 py-12">
@@ -81,7 +229,7 @@ export default function CalculatorsPage() {
             TikTok Creator Calculators
           </h1>
           <p className="text-body-lg text-neutral-600 max-w-2xl mx-auto">
-            Free, data-driven calculators for TikTok creators. Estimate earnings, calculate engagement rates, determine brand deal prices, and more.
+            Complete suite of 28 free, data-driven calculators for TikTok creators. Estimate earnings, track growth, analyze engagement, calculate ROI, and optimize your creator business.
           </p>
         </div>
 
