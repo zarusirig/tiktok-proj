@@ -33,7 +33,7 @@ export default function CreatorFundVsBrandDealsPage() {
     },
   ];
 
-  return (
+  const element = (
     <div className="min-h-screen bg-neutral-50">
       {/* Breadcrumb */}
       <nav className="bg-white border-b border-neutral-200 py-3">
@@ -464,4 +464,5 @@ export default function CreatorFundVsBrandDealsPage() {
       </div>
     </div>
   );
+  return element;
 }

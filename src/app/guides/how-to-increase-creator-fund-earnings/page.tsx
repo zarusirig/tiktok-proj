@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { Card } from '@/components/ui/Card';
-import { FAQSection } from '@/components/FAQSection';
+import { FAQSection } from '@/components/calculator/FAQSection';
 
 export const metadata: Metadata = {
   title: 'How to Increase TikTok Creator Fund Earnings: 12 Proven Strategies',
@@ -462,7 +462,7 @@ export default function IncreaseCreatorFundEarningsPage() {
 
         {/* FAQ Section */}
         <FAQSection
-          title="Frequently Asked Questions"
+          pageName="Increase Creator Fund Earnings"
           faqs={faqs}
         />
 

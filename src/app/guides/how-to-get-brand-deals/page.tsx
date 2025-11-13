@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { Card } from '@/components/ui/Card';
-import { FAQSection } from '@/components/FAQSection';
+import { FAQSection } from '@/components/calculator/FAQSection';
 
 export const metadata: Metadata = {
   title: 'How to Get Brand Deals on TikTok: Complete Guide for Creators',
@@ -397,7 +397,7 @@ Looking forward to hearing from you!
 
         {/* FAQ Section */}
         <FAQSection
-          title="Frequently Asked Questions"
+          pageName="How to Get Brand Deals"
           faqs={faqs}
         />
 

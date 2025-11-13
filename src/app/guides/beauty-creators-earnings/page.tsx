@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { Card } from '@/components/ui/Card';
-import { FAQSection } from '@/components/FAQSection';
+import { FAQSection } from '@/components/calculator/FAQSection';
 
 export const metadata: Metadata = {
   title: 'How Much Do Beauty Creators Make on TikTok? Earnings Breakdown 2025',
@@ -367,7 +367,7 @@ export default function BeautyCreatorsEarningsPage() {
 
         {/* FAQ Section */}
         <FAQSection
-          title="Frequently Asked Questions"
+          pageName="Beauty Creators Earnings"
           faqs={faqs}
         />
 

@@ -88,7 +88,7 @@ export default function CreatorFundCalculatorPage() {
     }, 500);
   };
 
-  return (
+  const element = (
     <div className="min-h-screen bg-gradient-to-br from-neutral-50 via-white to-primary-50 py-8">
       <div className="container-custom">
         <Breadcrumb
@@ -386,4 +386,5 @@ Where:
       </div>
     </div>
   );
+  return element;
 }

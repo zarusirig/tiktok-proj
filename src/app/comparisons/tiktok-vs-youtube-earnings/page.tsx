@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { Card } from '@/components/ui/Card';
-import { FAQSection } from '@/components/FAQSection';
+import { FAQSection } from '@/components/calculator/FAQSection';
 
 export const metadata: Metadata = {
   title: 'TikTok vs YouTube Earnings: Which Platform Pays More in 2025?',
@@ -409,7 +409,7 @@ export default function TikTokVsYouTubeEarningsPage() {
 
         {/* FAQ Section */}
         <FAQSection
-          title="Frequently Asked Questions"
+          pageName="TikTok vs YouTube Earnings"
           faqs={faqs}
         />
 

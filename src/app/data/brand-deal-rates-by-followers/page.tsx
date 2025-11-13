@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { Card } from '@/components/ui/Card';
-import { FAQSection } from '@/components/FAQSection';
+import { FAQSection } from '@/components/calculator/FAQSection';
 
 export const metadata: Metadata = {
   title: 'TikTok Brand Deal Rates by Follower Count: 2025 Pricing Guide',
@@ -426,7 +426,7 @@ export default function BrandDealRatesByFollowersPage() {
 
         {/* FAQ Section */}
         <FAQSection
-          title="Frequently Asked Questions"
+          pageName="Brand Deal Rates by Followers"
           faqs={faqs}
         />
 

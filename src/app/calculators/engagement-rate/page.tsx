@@ -69,7 +69,7 @@ export default function EngagementRateCalculatorPage() {
     }, 500);
   };
 
-  return (
+  const element = (
     <div className="min-h-screen bg-gradient-to-br from-neutral-50 via-white to-secondary-50 py-8">
       <div className="container-custom">
         <Breadcrumb
@@ -395,4 +395,5 @@ Engagement Rate: (2,750 / 50,000) × 100 = 5.5%`}
       </div>
     </div>
   );
+  return element;
 }

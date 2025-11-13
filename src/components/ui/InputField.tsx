@@ -50,7 +50,7 @@ export function InputField({
       <div className="flex items-center justify-between mb-2">
         <label htmlFor={id} className="label">
           {label}
-          {required && <span className="text-error-DEFAULT ml-1">*</span>}
+          {required && <span className="text-error ml-1">*</span>}
         </label>
         {tooltip && (
           <button
@@ -102,9 +102,9 @@ export function InputField({
           disabled={disabled}
           className={cn(
             'input',
-            icon && 'pl-10',
-            error && 'input-error',
-            disabled && 'opacity-50 cursor-not-allowed'
+            icon ? 'pl-10' : '',
+            error ? 'input-error' : '',
+            disabled ? 'opacity-50 cursor-not-allowed' : ''
           )}
         />
       </div>
