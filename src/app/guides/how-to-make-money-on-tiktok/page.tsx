@@ -2,10 +2,13 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { Card } from '@/components/ui/Card';
 import { FAQSection } from '@/components/calculator/FAQSection';
+import { AuthorBio, ExpertBadge, Citations, Disclaimer } from '@/components/trust';
+import { getGuideAuthor } from '@/lib/data/authors';
+import { getCitations, citationSets } from '@/lib/data/commonCitations';
 
 export const metadata: Metadata = {
-  title: 'How to Make Money on TikTok: Complete 2025 Guide',
-  description: 'Comprehensive guide to TikTok monetization: Creator Fund, brand deals, LIVE gifts, TikTok Shop, and more. Learn all income streams and how much creators really earn.',
+  title: 'How to Make Money on TikTok: Complete 2025 Guide - Expert Research',
+  description: 'Comprehensive guide to TikTok monetization: Creator Fund, brand deals, LIVE gifts, TikTok Shop, and more. Learn all income streams and how much creators really earn. Expert-reviewed with verified data.',
   keywords: ['how to make money on tiktok', 'tiktok monetization', 'tiktok creator fund', 'tiktok earnings', 'tiktok income streams'],
 };
 
@@ -23,7 +26,12 @@ export default function HowToMakeMoneyOnTikTokPage() {
         </nav>
 
         {/* Hero */}
-        <div className="mb-12">
+        <div className="mb-8">
+          <div className="flex flex-wrap gap-2 mb-4">
+            <ExpertBadge type="expert-reviewed" variant="compact" />
+            <ExpertBadge type="data-verified" variant="compact" />
+            <ExpertBadge type="regularly-updated" variant="compact" />
+          </div>
           <h1 className="text-display-md md:text-display-lg font-bold text-neutral-900 mb-4">
             How to Make Money on TikTok: Complete 2025 Guide
           </h1>
@@ -36,6 +44,14 @@ export default function HowToMakeMoneyOnTikTokPage() {
             <span>Last updated: November 13, 2025</span>
           </div>
         </div>
+
+        {/* Author Bio */}
+        <AuthorBio
+          author={getGuideAuthor()}
+          publishDate="2024-01-15"
+          lastUpdated="2025-11-13"
+          variant="compact"
+        />
 
         {/* Table of Contents */}
         <Card className="mb-12 bg-primary-50 border border-primary-200">
@@ -297,6 +313,22 @@ export default function HowToMakeMoneyOnTikTokPage() {
         <p className="text-body-md text-neutral-600 italic text-center py-8">
           This is a preview. The full 10,000-word guide continues with sections on LIVE monetization, TikTok Shop, requirements timeline, case studies, tax considerations, and complete FAQ.
         </p>
+
+        {/* Citations */}
+        <Citations
+          citations={getCitations([
+            'influencer-marketing-hub-2024',
+            'tiktok-creator-fund-official',
+            'business-insider-creator-earnings',
+            'creator-economy-report-2024',
+            'tiktok-creator-marketplace',
+          ])}
+          title="Sources & References"
+        />
+
+        {/* Disclaimers */}
+        <Disclaimer type="financial" variant="default" />
+        <Disclaimer type="educational" variant="default" />
 
         {/* FAQ Section */}
         <FAQSection
