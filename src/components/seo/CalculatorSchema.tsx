@@ -1,0 +1,261 @@
+import React from 'react';
+
+export interface CalculatorSchemaProps {
+  name: string;
+  description: string;
+  url: string;
+  category?: string;
+  aggregateRating?: {
+    ratingValue: number;
+    reviewCount: number;
+  };
+  author?: {
+    name: string;
+    url?: string;
+  };
+  datePublished?: string;
+  dateModified?: string;
+  offers?: {
+    price: string;
+    priceCurrency: string;
+  };
+  image?: string;
+  keywords?: string[];
+}
+
+export function CalculatorSchema({
+  name,
+  description,
+  url,
+  category = 'BusinessApplication',
+  aggregateRating,
+  author = { name: 'TikTok Calculator', url: 'https://tiktokcalculator.com' },
+  datePublished,
+  dateModified,
+  offers = { price: '0', priceCurrency: 'USD' },
+  image,
+  keywords,
+}: CalculatorSchemaProps) {
+  const schema = {
+    '@context': 'https://schema.org',
+    '@type': 'SoftwareApplication',
+    name,
+    description,
+    url,
+    applicationCategory: category,
+    operatingSystem: 'Web',
+    offers: {
+      '@type': 'Offer',
+      price: offers.price,
+      priceCurrency: offers.priceCurrency,
+      availability: 'https://schema.org/InStock',
+    },
+    ...(aggregateRating && {
+      aggregateRating: {
+        '@type': 'AggregateRating',
+        ratingValue: aggregateRating.ratingValue.toString(),
+        reviewCount: aggregateRating.reviewCount.toString(),
+        bestRating: '5',
+        worstRating: '1',
+      },
+    }),
+    ...(author && {
+      author: {
+        '@type': 'Organization',
+        name: author.name,
+        url: author.url,
+      },
+    }),
+    ...(datePublished && { datePublished }),
+    ...(dateModified && { dateModified }),
+    ...(image && { image }),
+    ...(keywords && { keywords: keywords.join(', ') }),
+    isAccessibleForFree: true,
+    browserRequirements: 'Requires JavaScript. Requires HTML5.',
+  };
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+    />
+  );
+}
+
+// Article Schema for guides and pillar pages
+export interface ArticleSchemaProps {
+  headline: string;
+  description: string;
+  url: string;
+  datePublished: string;
+  dateModified: string;
+  author?: {
+    name: string;
+    url?: string;
+  };
+  image?: string;
+  keywords?: string[];
+  articleBody?: string;
+}
+
+export function ArticleSchema({
+  headline,
+  description,
+  url,
+  datePublished,
+  dateModified,
+  author = { name: 'TikTok Calculator', url: 'https://tiktokcalculator.com' },
+  image,
+  keywords,
+  articleBody,
+}: ArticleSchemaProps) {
+  const schema = {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline,
+    description,
+    url,
+    datePublished,
+    dateModified,
+    author: {
+      '@type': 'Organization',
+      name: author.name,
+      url: author.url,
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: 'TikTok Calculator',
+      url: 'https://tiktokcalculator.com',
+      logo: {
+        '@type': 'ImageObject',
+        url: 'https://tiktokcalculator.com/logo.png',
+      },
+    },
+    ...(image && {
+      image: {
+        '@type': 'ImageObject',
+        url: image,
+      },
+    }),
+    ...(keywords && { keywords: keywords.join(', ') }),
+    ...(articleBody && { articleBody }),
+    inLanguage: 'en-US',
+  };
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+    />
+  );
+}
+
+// FAQ Schema for FAQ sections
+export interface FAQSchemaProps {
+  faqs: Array<{
+    question: string;
+    answer: string;
+  }>;
+}
+
+export function FAQSchema({ faqs }: FAQSchemaProps) {
+  const schema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faqs.map((faq) => ({
+      '@type': 'Question',
+      name: faq.question,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: faq.answer,
+      },
+    })),
+  };
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+    />
+  );
+}
+
+// Breadcrumb Schema
+export interface BreadcrumbSchemaProps {
+  items: Array<{
+    name: string;
+    url: string;
+  }>;
+}
+
+export function BreadcrumbSchema({ items }: BreadcrumbSchemaProps) {
+  const schema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: items.map((item, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      name: item.name,
+      item: item.url,
+    })),
+  };
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+    />
+  );
+}
+
+// Organization Schema for homepage
+export function OrganizationSchema() {
+  const schema = {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: 'TikTok Calculator',
+    url: 'https://tiktokcalculator.com',
+    logo: 'https://tiktokcalculator.com/logo.png',
+    description:
+      'Free TikTok calculators for creators to estimate earnings, engagement rates, and growth metrics. Data-driven tools trusted by 50,000+ TikTok creators.',
+    sameAs: [
+      // Add social media profiles here when available
+    ],
+    contactPoint: {
+      '@type': 'ContactPoint',
+      contactType: 'Customer Service',
+      availableLanguage: 'English',
+    },
+  };
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+    />
+  );
+}
+
+// WebSite Schema for homepage
+export function WebSiteSchema() {
+  const schema = {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: 'TikTok Calculator',
+    url: 'https://tiktokcalculator.com',
+    description:
+      'Free TikTok calculators and tools for creators. Calculate earnings, engagement rates, follower growth, and more.',
+    potentialAction: {
+      '@type': 'SearchAction',
+      target: 'https://tiktokcalculator.com/search?q={search_term_string}',
+      'query-input': 'required name=search_term_string',
+    },
+  };
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+    />
+  );
+}

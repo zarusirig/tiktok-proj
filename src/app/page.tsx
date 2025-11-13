@@ -346,6 +346,20 @@ const featuredCalculators = [
     icon: '💵',
   },
   {
+    name: 'Campaign ROI Calculator',
+    slug: 'campaign-roi',
+    description: 'Measure profitability of your TikTok marketing campaigns',
+    icon: '📈',
+    badge: 'NEW',
+  },
+  {
+    name: 'Affiliate Commission Calculator',
+    slug: 'affiliate-commission',
+    description: 'Calculate TikTok Shop affiliate earnings potential',
+    icon: '🤝',
+    badge: 'NEW',
+  },
+  {
     name: 'RPM Calculator',
     slug: 'rpm',
     description: 'Calculate your revenue per 1,000 views (RPM)',
