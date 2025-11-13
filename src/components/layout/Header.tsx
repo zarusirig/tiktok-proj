@@ -40,6 +40,18 @@ export function Header() {
       ],
     },
     {
+      label: 'News',
+      href: '/news',
+      dropdown: [
+        { href: '/news', label: 'Latest News' },
+        { href: '/news', label: 'Algorithm Updates' },
+        { href: '/news', label: 'Monetization News' },
+        { href: '/news', label: 'TikTok Shop Updates' },
+        { href: '/news', label: 'Platform Features' },
+        { href: '/news', label: 'View All News →', featured: true },
+      ],
+    },
+    {
       label: 'Data & Insights',
       href: '/data',
       dropdown: [

@@ -41,6 +41,17 @@ export function Footer() {
       ],
     },
     {
+      title: 'News & Updates',
+      links: [
+        { href: '/news', label: 'Latest TikTok News' },
+        { href: '/news', label: 'Algorithm Updates' },
+        { href: '/news', label: 'Monetization Changes' },
+        { href: '/news', label: 'TikTok Shop News' },
+        { href: '/news', label: 'Platform Features' },
+        { href: '/news', label: 'Safety & Privacy' },
+      ],
+    },
+    {
       title: 'Data & Insights',
       links: [
         { href: '/data/brand-deal-rates-by-followers', label: 'Brand Deal Rates' },
