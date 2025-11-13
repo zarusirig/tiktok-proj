@@ -62,7 +62,7 @@
   }
 
   .input-error {
-    @apply border-error-DEFAULT focus:border-error-DEFAULT;
+    @apply border-error focus:border-error;
   }
 
   /* Label Styles */
@@ -76,7 +76,7 @@
   }
 
   .error-text {
-    @apply text-body-sm text-error-DEFAULT mt-1;
+    @apply text-body-sm text-error mt-1;
   }
 
   /* Container */

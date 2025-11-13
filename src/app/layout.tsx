@@ -72,7 +72,7 @@ export default function RootLayout({
 
   return (
     <html lang="en" className={inter.variable}>
-      <head>
+      <body className="font-sans">
         {GA_MEASUREMENT_ID && (
           <>
             <Script
@@ -91,8 +91,6 @@ export default function RootLayout({
             </Script>
           </>
         )}
-      </head>
-      <body className="font-sans">
         <div className="flex min-h-screen flex-col">
           <Header />
           <main className="flex-1">{children}</main>

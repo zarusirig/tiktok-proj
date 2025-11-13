@@ -33,7 +33,7 @@ export default function FAQPage() {
                 },
                 {
                   question: 'How often do you update your data?',
-                  answer: 'We refresh our data quarterly (every 3 months) to reflect current platform dynamics. Major updates to TikTok's monetization programs trigger immediate data reviews. You can see the "Last Updated" date at the bottom of each calculator's methodology section.',
+                  answer: 'We refresh our data quarterly (every 3 months) to reflect current platform dynamics. Major updates to TikTok\'s monetization programs trigger immediate data reviews. You can see the "Last Updated" date at the bottom of each calculator\'s methodology section.',
                 },
                 {
                   question: 'Can I trust your numbers for negotiations?',
@@ -50,11 +50,11 @@ export default function FAQPage() {
               faqs={[
                 {
                   question: 'Where does your data come from?',
-                  answer: 'Our data sources include: (1) Surveys of 500+ TikTok creators (Q4 2024), (2) TikTok Creator Portal official documentation, (3) Influencer Marketing Hub reports, (4) CreatorIQ and AspireIQ databases, (5) Social Media Today research. Full sources are listed in each calculator's methodology section.',
+                  answer: 'Our data sources include: (1) Surveys of 500+ TikTok creators (Q4 2024), (2) TikTok Creator Portal official documentation, (3) Influencer Marketing Hub reports, (4) CreatorIQ and AspireIQ databases, (5) Social Media Today research. Full sources are listed in each calculator\'s methodology section.',
                 },
                 {
                   question: 'Why do you show ranges instead of exact numbers?',
-                  answer: 'TikTok earnings vary significantly based on factors we can't fully predict: audience location (US viewers pay more), watch time, content niche, and algorithm changes. Ranges give you a realistic expectation rather than false precision.',
+                  answer: 'TikTok earnings vary significantly based on factors we can\'t fully predict: audience location (US viewers pay more), watch time, content niche, and algorithm changes. Ranges give you a realistic expectation rather than false precision.',
                 },
                 {
                   question: 'How do engagement rates affect earnings?',
@@ -95,7 +95,7 @@ export default function FAQPage() {
                   answer: 'Start with the Engagement Rate Calculator to understand your audience interaction. Then use the Creator Fund Calculator if you qualify (10K+ followers, 100K+ monthly views). Finally, check the Brand Deal Rate Calculator to see what you should charge sponsors.',
                 },
                 {
-                  question: 'What if I don't know my engagement rate?',
+                  question: 'What if I don\'t know my engagement rate?',
                   answer: 'Use our Engagement Rate Calculator! Enter your follower count and average likes/comments/shares from your recent videos. You can find these stats in TikTok Analytics or by manually checking your last 10-20 videos.',
                 },
                 {

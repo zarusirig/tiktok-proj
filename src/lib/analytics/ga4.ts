@@ -59,10 +59,10 @@ export function trackCalculation(
   results: Record<string, any>
 ): void {
   // Track calculation action
-  trackCalculatorInteraction('calculate', 'calculate', inputs);
+  trackCalculatorInteraction(calculatorName, 'calculate', inputs);
 
   // Track result displayed
-  trackCalculatorInteraction('result_displayed', 'result_displayed', {
+  trackCalculatorInteraction(calculatorName, 'result_displayed', {
     ...results,
   });
 

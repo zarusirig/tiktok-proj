@@ -102,9 +102,9 @@ export function InputField({
           disabled={disabled}
           className={cn(
             'input',
-            icon && 'pl-10',
-            error && 'input-error',
-            disabled && 'opacity-50 cursor-not-allowed'
+            icon ? 'pl-10' : '',
+            error ? 'input-error' : '',
+            disabled ? 'opacity-50 cursor-not-allowed' : ''
           )}
         />
       </div>

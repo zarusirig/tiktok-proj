@@ -14,9 +14,9 @@ const nextConfig = {
   },
 
   // Performance optimizations
-  experimental: {
-    optimizeCss: true,
-  },
+  // experimental: {
+  //   optimizeCss: true,
+  // },
 
   // SEO and metadata
   generateBuildId: async () => {
