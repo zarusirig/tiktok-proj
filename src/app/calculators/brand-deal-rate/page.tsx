@@ -10,9 +10,6 @@ import { ResultsDisplay } from '@/components/calculator/ResultsDisplay';
 import { MethodologySection } from '@/components/calculator/MethodologySection';
 import { FAQSection } from '@/components/calculator/FAQSection';
 import { RelatedCalculators } from '@/components/calculator/RelatedCalculators';
-import { AuthorBio, ExpertBadge, DataTransparency, Disclaimer } from '@/components/trust';
-import { getCalculatorAuthor } from '@/lib/data/authors';
-import { getDataSources, getLimitations } from '@/lib/data/trustData';
 import {
   calculateBrandDeal,
   validateBrandDealInput,
@@ -89,29 +86,16 @@ export default function BrandDealRateCalculatorPage() {
           ]}
         />
 
-        <div className="max-w-4xl mx-auto text-center mb-8">
+        <div className="max-w-4xl mx-auto text-center mb-12">
           <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-accent-500 to-primary-500 text-white text-3xl mb-6">
             🤝
           </div>
           <h1 className="text-display-md md:text-display-lg font-bold text-neutral-900 mb-4">
             TikTok Brand Deal Rate Calculator
           </h1>
-          <p className="text-body-lg text-neutral-600 max-w-2xl mx-auto mb-6">
+          <p className="text-body-lg text-neutral-600 max-w-2xl mx-auto">
             Calculate how much you should charge brands for sponsored content based on your follower count, engagement rate, niche, and deliverable type.
           </p>
-          <div className="flex flex-wrap justify-center gap-3">
-            <ExpertBadge type="data-verified" variant="compact" />
-            <ExpertBadge type="expert-reviewed" variant="compact" />
-            <ExpertBadge type="regularly-updated" variant="compact" />
-          </div>
-        </div>
-
-        <div className="max-w-4xl mx-auto mb-12">
-          <AuthorBio
-            author={getCalculatorAuthor()}
-            lastUpdated="2025-11-13"
-            variant="compact"
-          />
         </div>
 
         <div className="max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
@@ -340,16 +324,6 @@ Multipliers:
               },
             ]}
           />
-
-          <DataTransparency
-            sources={getDataSources(['brand-deal-database', 'creator-survey-2024', 'industry-reports'])}
-            limitations={getLimitations('brandDeals')}
-            confidence="medium"
-            lastUpdated="2025-11-13"
-            updateFrequency="quarterly"
-          />
-
-          <Disclaimer type="financial" variant="default" />
         </div>
       </div>
     </div>
