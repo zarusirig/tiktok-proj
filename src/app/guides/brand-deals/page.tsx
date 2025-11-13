@@ -25,7 +25,7 @@ export default function BrandDealsGuidePage() {
           TikTok Brand Deals: How to Get Sponsored & What to Charge
         </h1>
         <p className="text-body-lg text-neutral-600 mb-4">
-          The complete guide to TikTok brand deals: negotiating rates, finding brands, creating media kits, and maximizing your sponsorship income in 2025.
+          The complete guide to TikTok brand deals: negotiating rates, finding brands, creating media kits, and maximizing your sponsorship income in 2025. Brand deals are the highest-earning income stream in our <Link href="/guides/how-to-make-money-on-tiktok" className="text-primary-600 hover:text-primary-700 underline font-medium">complete TikTok monetization guide</Link>.
         </p>
         <div className="flex items-center space-x-4 text-body-sm text-neutral-600 mb-12">
           <span>📝 28 min read</span>
@@ -133,7 +133,7 @@ export default function BrandDealsGuidePage() {
           <Card className="mb-6">
             <h3 className="text-heading-md font-semibold text-neutral-900 mb-4">Rate Multipliers by Niche</h3>
             <p className="text-body-md text-neutral-700 mb-4">
-              Some niches command premium rates due to higher brand budgets and audience purchasing power:
+              Some niches command premium rates due to higher brand budgets and audience purchasing power. Check our <Link href="/data/brand-deal-rates-by-followers" className="text-primary-600 hover:text-primary-700 underline font-medium">complete brand deal rates data by follower count</Link> for detailed benchmarks:
             </p>
             <div className="space-y-2">
               {nicheMultipliers.map((niche) => (
@@ -338,6 +338,78 @@ export default function BrandDealsGuidePage() {
             },
           ]}
         />
+
+        {/* Related Guides */}
+        <div className="mt-12 p-6 bg-neutral-100 rounded-xl">
+          <h3 className="text-heading-lg font-semibold text-neutral-900 mb-4">Essential Brand Deal Resources</h3>
+          <div className="grid md:grid-cols-2 gap-4">
+            <Link href="/guides/how-to-get-brand-deals-complete" className="p-4 bg-white rounded-lg hover:shadow-md transition-shadow">
+              <h4 className="font-semibold text-neutral-900 mb-2">How to Get Brand Deals (Complete)</h4>
+              <p className="text-body-sm text-neutral-600">From zero followers to landing your first sponsorship</p>
+            </Link>
+            <Link href="/guides/how-to-negotiate-brand-deals" className="p-4 bg-white rounded-lg hover:shadow-md transition-shadow">
+              <h4 className="font-semibold text-neutral-900 mb-2">How to Negotiate Brand Deals</h4>
+              <p className="text-body-sm text-neutral-600">Advanced negotiation tactics to maximize rates</p>
+            </Link>
+            <Link href="/guides/how-to-price-brand-deals" className="p-4 bg-white rounded-lg hover:shadow-md transition-shadow">
+              <h4 className="font-semibold text-neutral-900 mb-2">How to Price Brand Deals</h4>
+              <p className="text-body-sm text-neutral-600">Set profitable rates based on your metrics</p>
+            </Link>
+            <Link href="/guides/tiktok-creator-marketplace" className="p-4 bg-white rounded-lg hover:shadow-md transition-shadow">
+              <h4 className="font-semibold text-neutral-900 mb-2">TikTok Creator Marketplace Guide</h4>
+              <p className="text-body-sm text-neutral-600">Get discovered by brands on the official platform</p>
+            </Link>
+            <Link href="/guides/spark-ads-for-creators" className="p-4 bg-white rounded-lg hover:shadow-md transition-shadow">
+              <h4 className="font-semibold text-neutral-900 mb-2">Spark Ads for Creators</h4>
+              <p className="text-body-sm text-neutral-600">Earn extra from brands promoting your content</p>
+            </Link>
+            <Link href="/compliance/sponsorship-disclosure" className="p-4 bg-white rounded-lg hover:shadow-md transition-shadow">
+              <h4 className="font-semibold text-neutral-900 mb-2">FTC Sponsorship Disclosure Rules</h4>
+              <p className="text-body-sm text-neutral-600">Stay compliant with sponsorship requirements</p>
+            </Link>
+          </div>
+        </div>
+
+        {/* Comparison Pages */}
+        <div className="mt-8 p-6 bg-accent-50 rounded-xl border border-accent-200">
+          <h3 className="text-heading-lg font-semibold text-neutral-900 mb-4">Compare Income Streams</h3>
+          <div className="grid md:grid-cols-2 gap-4">
+            <Link href="/comparisons/creator-fund-vs-brand-deals" className="p-4 bg-white rounded-lg hover:shadow-md transition-shadow">
+              <h4 className="font-semibold text-neutral-900 mb-2">Brand Deals vs Creator Fund</h4>
+              <p className="text-body-sm text-neutral-600">Which monetization stream pays more?</p>
+            </Link>
+            <Link href="/comparisons/tiktok-vs-instagram-income" className="p-4 bg-white rounded-lg hover:shadow-md transition-shadow">
+              <h4 className="font-semibold text-neutral-900 mb-2">TikTok vs Instagram Brand Deals</h4>
+              <p className="text-body-sm text-neutral-600">Compare sponsorship rates across platforms</p>
+            </Link>
+          </div>
+        </div>
+
+        {/* Calculators */}
+        <div className="mt-8 p-6 bg-primary-50 rounded-xl border border-primary-200">
+          <h3 className="text-heading-lg font-semibold text-neutral-900 mb-4">Brand Deal Calculators</h3>
+          <div className="grid md:grid-cols-3 gap-4">
+            <Link href="/calculators/brand-deal-rate" className="p-4 bg-white rounded-lg hover:shadow-md transition-shadow">
+              <h4 className="font-semibold text-primary-600 mb-2">💰 Brand Deal Rate Calculator</h4>
+              <p className="text-body-sm text-neutral-600">Calculate what you should charge</p>
+            </Link>
+            <Link href="/calculators/engagement-rate" className="p-4 bg-white rounded-lg hover:shadow-md transition-shadow">
+              <h4 className="font-semibold text-primary-600 mb-2">📈 Engagement Rate Calculator</h4>
+              <p className="text-body-sm text-neutral-600">Boost your negotiation power</p>
+            </Link>
+            <Link href="/calculators/sponsorship-roi" className="p-4 bg-white rounded-lg hover:shadow-md transition-shadow">
+              <h4 className="font-semibold text-primary-600 mb-2">📊 Sponsorship ROI Calculator</h4>
+              <p className="text-body-sm text-neutral-600">Show brands their potential return</p>
+            </Link>
+          </div>
+        </div>
+
+        {/* Back to Main Guide */}
+        <div className="mt-8 text-center">
+          <Link href="/guides/how-to-make-money-on-tiktok" className="inline-flex items-center text-primary-600 hover:text-primary-700 font-medium">
+            ← Back to Complete TikTok Monetization Guide
+          </Link>
+        </div>
       </div>
     </div>
   );

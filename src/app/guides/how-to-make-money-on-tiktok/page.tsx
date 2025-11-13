@@ -68,8 +68,11 @@ export default function HowToMakeMoneyOnTikTokPage() {
           <p className="text-body-md text-neutral-700 leading-relaxed mb-4">
             <strong>Real Example:</strong> Sarah, a lifestyle creator with 150K followers, earns approximately $3,200/month: $200 from Creator Fund, $2,500 from 2-3 brand deals monthly, and $500 from LIVE gifts. She reached monetization 8 months after starting her account.
           </p>
-          <p className="text-body-md text-neutral-700 leading-relaxed">
+          <p className="text-body-md text-neutral-700 leading-relaxed mb-4">
             This guide covers <strong>every</strong> monetization method available in 2025, realistic earnings expectations, and step-by-step strategies to start earning from your TikTok content.
+          </p>
+          <p className="text-body-md text-neutral-700 leading-relaxed">
+            Want to estimate your total earning potential across all streams? Use our <Link href="/calculators/tiktok-money" className="text-primary-600 hover:text-primary-700 underline font-medium">TikTok money calculator</Link> to get personalized projections based on your follower count and engagement rate.
           </p>
         </section>
 
@@ -80,7 +83,7 @@ export default function HowToMakeMoneyOnTikTokPage() {
           <Card className="mb-6">
             <h3 className="text-heading-md font-semibold text-neutral-900 mb-4">What Is the Creator Fund?</h3>
             <p className="text-body-md text-neutral-700 leading-relaxed mb-4">
-              The TikTok Creator Fund pays eligible creators based on video views and engagement. Launched in 2020 with $200 million in funding, it's one of the easiest monetization streams to access—but also the lowest-paying.
+              The TikTok Creator Fund pays eligible creators based on video views and engagement. Launched in 2020 with $200 million in funding, it's one of the easiest monetization streams to access—but also the lowest-paying. For a deep dive into <Link href="/guides/tiktok-creator-fund" className="text-primary-600 hover:text-primary-700 underline font-medium">how the Creator Fund actually works</Link>, including RPM rates by niche and optimization strategies, check our complete guide.
             </p>
             <div className="bg-neutral-50 p-4 rounded-lg">
               <p className="text-body-md text-neutral-700"><strong>Payment Rate:</strong> $0.02–$0.04 per 1,000 views (average $0.03)</p>
@@ -164,7 +167,7 @@ export default function HowToMakeMoneyOnTikTokPage() {
             </div>
             <div className="mt-4 p-4 bg-warning-light rounded-lg">
               <p className="text-body-sm text-neutral-800">
-                <strong>Note:</strong> Creator Fund earnings are considered <em>supplementary income</em> for most creators. Brand deals typically generate 5-10× more revenue for the same audience size.
+                <strong>Note:</strong> Creator Fund earnings are considered <em>supplementary income</em> for most creators. <Link href="/guides/brand-deals" className="text-primary-600 hover:text-primary-700 underline font-medium">Brand deals</Link> typically generate 5-10× more revenue for the same audience size. See our <Link href="/comparisons/creator-fund-vs-brand-deals" className="text-primary-600 hover:text-primary-700 underline font-medium">Creator Fund vs Brand Deals comparison</Link> to understand which income stream to prioritize.
               </p>
             </div>
           </Card>
@@ -208,7 +211,7 @@ export default function HowToMakeMoneyOnTikTokPage() {
           <h2 className="text-display-sm font-bold text-neutral-900 mb-6">2. Brand Deals & Sponsorships</h2>
 
           <p className="text-body-lg text-neutral-700 leading-relaxed mb-6">
-            Brand deals are the <strong>highest-earning monetization stream</strong> for most TikTok creators. Companies pay creators to feature their products or services in videos. Unlike Creator Fund's $0.03 per 1,000 views, brand deals can pay $0.10–$2.00+ per follower.
+            Brand deals are the <strong>highest-earning monetization stream</strong> for most TikTok creators. Companies pay creators to feature their products or services in videos. Unlike Creator Fund's $0.03 per 1,000 views, brand deals can pay $0.10–$2.00+ per follower. Our <Link href="/guides/brand-deals" className="text-primary-600 hover:text-primary-700 underline font-medium">complete brand deals guide</Link> covers everything from <Link href="/guides/how-to-get-brand-deals" className="text-primary-600 hover:text-primary-700 underline font-medium">finding your first sponsorships</Link> to <Link href="/guides/how-to-negotiate-brand-deals" className="text-primary-600 hover:text-primary-700 underline font-medium">negotiating premium rates</Link>.
           </p>
 
           <Card className="mb-6">
@@ -259,7 +262,7 @@ export default function HowToMakeMoneyOnTikTokPage() {
               <div className="p-4 bg-neutral-50 rounded-lg">
                 <h4 className="font-semibold text-neutral-900 mb-2">1. Join TikTok Creator Marketplace</h4>
                 <p className="text-body-sm text-neutral-700">
-                  TikTok's official platform connecting brands with creators. Requires 10K+ followers and strong engagement rate. Brands can discover and contact you directly.
+                  <Link href="/guides/tiktok-creator-marketplace" className="text-primary-600 hover:text-primary-700 underline font-medium">TikTok Creator Marketplace</Link> is the official platform connecting brands with creators. Requires 10K+ followers and strong engagement rate. Brands can discover and contact you directly.
                 </p>
               </div>
               <div className="p-4 bg-neutral-50 rounded-lg">
@@ -337,7 +340,73 @@ export default function HowToMakeMoneyOnTikTokPage() {
               <h4 className="font-semibold text-neutral-900 mb-2">Brand Deals Guide</h4>
               <p className="text-body-sm text-neutral-600">How to get sponsored and negotiate rates</p>
             </Link>
+            <Link href="/guides/tiktok-live" className="p-4 bg-white rounded-lg hover:shadow-md transition-shadow">
+              <h4 className="font-semibold text-neutral-900 mb-2">TikTok LIVE Monetization Guide</h4>
+              <p className="text-body-sm text-neutral-600">Earn through LIVE gifts, subscriptions, and LIVE shopping</p>
+            </Link>
+            <Link href="/guides/tiktok-shop-affiliate" className="p-4 bg-white rounded-lg hover:shadow-md transition-shadow">
+              <h4 className="font-semibold text-neutral-900 mb-2">TikTok Shop Affiliate Guide</h4>
+              <p className="text-body-sm text-neutral-600">Make commissions promoting products from TikTok Shop</p>
+            </Link>
+            <Link href="/guides/how-to-join-creator-fund" className="p-4 bg-white rounded-lg hover:shadow-md transition-shadow">
+              <h4 className="font-semibold text-neutral-900 mb-2">How to Join Creator Fund</h4>
+              <p className="text-body-sm text-neutral-600">Step-by-step application process and eligibility check</p>
+            </Link>
+            <Link href="/guides/how-to-get-brand-deals-complete" className="p-4 bg-white rounded-lg hover:shadow-md transition-shadow">
+              <h4 className="font-semibold text-neutral-900 mb-2">How to Get Brand Deals (Complete)</h4>
+              <p className="text-body-sm text-neutral-600">From zero followers to landing your first paid sponsorship</p>
+            </Link>
           </div>
+        </div>
+
+        {/* Essential Calculators */}
+        <div className="mt-8 p-6 bg-primary-50 rounded-xl border border-primary-200">
+          <h3 className="text-heading-lg font-semibold text-neutral-900 mb-4">Essential Earnings Calculators</h3>
+          <div className="grid md:grid-cols-3 gap-4">
+            <Link href="/calculators/tiktok-money" className="p-4 bg-white rounded-lg hover:shadow-md transition-shadow">
+              <h4 className="font-semibold text-primary-600 mb-2">💰 TikTok Money Calculator</h4>
+              <p className="text-body-sm text-neutral-600">Calculate total earnings from all streams</p>
+            </Link>
+            <Link href="/calculators/rpm" className="p-4 bg-white rounded-lg hover:shadow-md transition-shadow">
+              <h4 className="font-semibold text-primary-600 mb-2">📊 RPM Calculator</h4>
+              <p className="text-body-sm text-neutral-600">Analyze your Creator Fund RPM rate</p>
+            </Link>
+            <Link href="/calculators/engagement-rate" className="p-4 bg-white rounded-lg hover:shadow-md transition-shadow">
+              <h4 className="font-semibold text-primary-600 mb-2">📈 Engagement Rate Calculator</h4>
+              <p className="text-body-sm text-neutral-600">Calculate engagement to boost brand deal rates</p>
+            </Link>
+          </div>
+        </div>
+
+        {/* Next Steps */}
+        <div className="mt-8 p-6 bg-accent-50 rounded-xl border border-accent-200">
+          <h3 className="text-heading-lg font-semibold text-neutral-900 mb-4">🚀 Next Steps to Maximize Your Earnings</h3>
+          <ul className="space-y-3">
+            <li className="flex items-start space-x-3">
+              <span className="text-primary-600 font-bold mt-1">1.</span>
+              <p className="text-body-md text-neutral-700">
+                <Link href="/guides/how-to-increase-engagement" className="text-primary-600 hover:text-primary-700 underline font-medium">Increase your engagement rate</Link> to attract higher-paying brand deals and improve algorithm performance
+              </p>
+            </li>
+            <li className="flex items-start space-x-3">
+              <span className="text-primary-600 font-bold mt-1">2.</span>
+              <p className="text-body-md text-neutral-700">
+                Learn <Link href="/guides/how-to-price-brand-deals" className="text-primary-600 hover:text-primary-700 underline font-medium">how to price your sponsorships</Link> correctly to avoid leaving money on the table
+              </p>
+            </li>
+            <li className="flex items-start space-x-3">
+              <span className="text-primary-600 font-bold mt-1">3.</span>
+              <p className="text-body-md text-neutral-700">
+                Understand <Link href="/guides/creator-tax-strategy" className="text-primary-600 hover:text-primary-700 underline font-medium">creator tax deductions</Link> to keep more of what you earn
+              </p>
+            </li>
+            <li className="flex items-start space-x-3">
+              <span className="text-primary-600 font-bold mt-1">4.</span>
+              <p className="text-body-md text-neutral-700">
+                Compare <Link href="/comparisons/tiktok-vs-youtube-earnings" className="text-primary-600 hover:text-primary-700 underline font-medium">TikTok vs YouTube earnings</Link> to decide if you should expand to multi-platform
+              </p>
+            </li>
+          </ul>
         </div>
       </div>
     </div>
