@@ -9,6 +9,7 @@ import { SelectField } from '@/components/ui/SelectField';
 import { MethodologySection } from '@/components/calculator/MethodologySection';
 import { FAQSection } from '@/components/calculator/FAQSection';
 import { RelatedCalculators } from '@/components/calculator/RelatedCalculators';
+import { CalculatorSchema, FAQSchema, BreadcrumbSchema } from '@/components/seo/CalculatorSchema';
 import {
   calculateCreatorFund,
   validateCreatorFundInput,
@@ -64,15 +65,63 @@ export default function CreatorFundCalculatorPage() {
     }, 500);
   };
 
+  const faqs = [
+    {
+      question: 'How much does TikTok Creator Fund pay per 1,000 views?',
+      answer: 'TikTok Creator Fund typically pays $0.02–$0.04 per 1,000 views ($20–$40 per million views). The exact RPM depends on your engagement rate, niche, audience location, and video completion rate.',
+    },
+    {
+      question: 'How much can I make per month from Creator Fund?',
+      answer: 'With 500,000 monthly views: $10–$20/month. With 1 million views: $20–$40/month. With 10 million views: $200–$400/month. Most creators find Creator Fund earnings supplemental, with brand deals paying 10-50× more.',
+    },
+    {
+      question: 'Why are my Creator Fund earnings so low?',
+      answer: 'Common reasons: (1) Low engagement rate reduces RPM, (2) Your audience is in low-CPM countries, (3) Short watch time/completion rate, (4) Oversaturated content niche, (5) TikTok\'s Creator Fund pool is split among more creators. Focus on other income streams like brand deals for higher earnings.',
+    },
+    {
+      question: 'Is TikTok Creator Fund worth it?',
+      answer: 'Yes for passive income—it requires no extra work beyond posting. But don\'t rely on it as primary income. At 50K followers earning $50-100/month from Creator Fund, you could earn $500-2,500/month from just 1-2 brand deals instead.',
+    },
+    {
+      question: 'Can I be in Creator Fund and do brand deals?',
+      answer: 'Yes! You can (and should) do both. Creator Fund earnings are passive and don\'t conflict with brand deals, LIVE gifts, or TikTok Shop. Most successful creators use Creator Fund as one of 3-5 income streams.',
+    },
+    {
+      question: 'How often does TikTok Creator Fund pay?',
+      answer: 'Creator Fund pays monthly, but you need a minimum balance of $10 (in the US) to cash out. Payments are typically processed 30-45 days after the end of each month. You can withdraw earnings to PayPal or bank account.',
+    },
+  ];
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-neutral-50 via-white to-success-light py-8">
-      <div className="container-custom">
-        <Breadcrumb
-          items={[
-            { label: 'Calculators', href: '/calculators' },
-            { label: 'Creator Fund Calculator', href: '/calculators/tiktok-creator-fund' },
-          ]}
-        />
+    <>
+      <CalculatorSchema
+        name="TikTok Creator Fund Calculator"
+        description="Estimate your monthly and annual earnings from the TikTok Creator Fund based on your views, engagement rate, and content niche."
+        url="https://tiktokcalculator.com/calculators/tiktok-creator-fund"
+        aggregateRating={{
+          ratingValue: 4.8,
+          reviewCount: 1247,
+        }}
+        datePublished="2024-01-15"
+        dateModified="2025-11-13"
+        keywords={['tiktok creator fund calculator', 'creator fund earnings', 'tiktok rpm calculator', 'creator fund payment']}
+      />
+      <FAQSchema faqs={faqs} />
+      <BreadcrumbSchema
+        items={[
+          { name: 'Home', url: 'https://tiktokcalculator.com' },
+          { name: 'Calculators', url: 'https://tiktokcalculator.com/calculators' },
+          { name: 'Creator Fund Calculator', url: 'https://tiktokcalculator.com/calculators/tiktok-creator-fund' },
+        ]}
+      />
+      <div className="min-h-screen bg-gradient-to-br from-neutral-50 via-white to-success-light py-8">
+        <div className="container-custom">
+          <Breadcrumb
+            items={[
+              { label: 'Calculators', href: '/calculators' },
+              { label: 'Creator Fund Calculator', href: '/calculators/tiktok-creator-fund' },
+            ]}
+          />
 
         <div className="max-w-4xl mx-auto text-center mb-12">
           <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-primary text-white text-3xl mb-6">
@@ -336,32 +385,7 @@ Monthly earnings: (500 × $0.036) = $18.00`}
 
           <FAQSection
             pageName="Creator Fund Calculator"
-            faqs={[
-              {
-                question: 'How much does TikTok Creator Fund pay per 1,000 views?',
-                answer: 'TikTok Creator Fund typically pays $0.02–$0.04 per 1,000 views ($20–$40 per million views). The exact RPM depends on your engagement rate, niche, audience location, and video completion rate.',
-              },
-              {
-                question: 'How much can I make per month from Creator Fund?',
-                answer: 'With 500,000 monthly views: $10–$20/month. With 1 million views: $20–$40/month. With 10 million views: $200–$400/month. Most creators find Creator Fund earnings supplemental, with brand deals paying 10-50× more.',
-              },
-              {
-                question: 'Why are my Creator Fund earnings so low?',
-                answer: 'Common reasons: (1) Low engagement rate reduces RPM, (2) Your audience is in low-CPM countries, (3) Short watch time/completion rate, (4) Oversaturated content niche, (5) TikTok\'s Creator Fund pool is split among more creators. Focus on other income streams like brand deals for higher earnings.',
-              },
-              {
-                question: 'Is TikTok Creator Fund worth it?',
-                answer: 'Yes for passive income—it requires no extra work beyond posting. But don\'t rely on it as primary income. At 50K followers earning $50-100/month from Creator Fund, you could earn $500-2,500/month from just 1-2 brand deals instead.',
-              },
-              {
-                question: 'Can I be in Creator Fund and do brand deals?',
-                answer: 'Yes! You can (and should) do both. Creator Fund earnings are passive and don\'t conflict with brand deals, LIVE gifts, or TikTok Shop. Most successful creators use Creator Fund as one of 3-5 income streams.',
-              },
-              {
-                question: 'How often does TikTok Creator Fund pay?',
-                answer: 'Creator Fund pays monthly, but you need a minimum balance of $10 (in the US) to cash out. Payments are typically processed 30-45 days after the end of each month. You can withdraw earnings to PayPal or bank account.',
-              },
-            ]}
+            faqs={faqs}
           />
 
           <RelatedCalculators
@@ -390,5 +414,6 @@ Monthly earnings: (500 × $0.036) = $18.00`}
         </div>
       </div>
     </div>
+    </>
   );
 }

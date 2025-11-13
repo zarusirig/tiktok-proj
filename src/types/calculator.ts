@@ -11,6 +11,12 @@ export type CalculatorType =
   | 'live-gifts'
   | 'coins'
   | 'rpm'
+  | 'cpm-cpv'
+  | 'affiliate-commission'
+  | 'conversion-rate'
+  | 'customer-acquisition-cost'
+  | 'lifetime-value'
+  | 'campaign-roi'
   | 'shop-commission'
   | 'money'
   | 'follower-growth'
@@ -556,4 +562,94 @@ export interface AdRevenueResult extends CalculatorResult {
   monthlyRevenue: number;
   annualRevenue: number;
   revenuePerVideo: number;
+}
+
+// CPM/CPV Input
+export interface CPMCPVInput {
+  adSpend: number;
+  impressions: number;
+}
+
+// CPM/CPV Result
+export interface CPMCPVResult extends CalculatorResult {
+  cpm: number;
+  cpv: number;
+  benchmark: 'excellent' | 'good' | 'average' | 'expensive';
+}
+
+// Affiliate Commission Input
+export interface AffiliateCommissionInput {
+  productPrice: number;
+  commissionRate: number;
+  monthlyClicks: number;
+  conversionRate: number;
+}
+
+// Affiliate Commission Result
+export interface AffiliateCommissionResult extends CalculatorResult {
+  commissionPerSale: number;
+  expectedSales: number;
+  monthlyEarnings: number;
+  annualProjection: number;
+  clickValue: number;
+}
+
+// Conversion Rate Input
+export interface ConversionRateInput {
+  visitors: number;
+  conversions: number;
+  timeframe: 'day' | 'week' | 'month';
+}
+
+// Conversion Rate Result
+export interface ConversionRateResult extends CalculatorResult {
+  conversionRate: number;
+  rating: 'excellent' | 'good' | 'average' | 'poor';
+}
+
+// Customer Acquisition Cost Input
+export interface CACInput {
+  marketingSpend: number;
+  newCustomers: number;
+  timeframe: 'month' | 'quarter' | 'year';
+}
+
+// Customer Acquisition Cost Result
+export interface CACResult extends CalculatorResult {
+  cac: number;
+  benchmark: 'excellent' | 'good' | 'acceptable' | 'high';
+}
+
+// Lifetime Value Input
+export interface LTVInput {
+  avgOrderValue: number;
+  purchaseFrequency: number;
+  customerLifespan: number;
+}
+
+// Lifetime Value Result
+export interface LTVResult extends CalculatorResult {
+  ltv: number;
+  monthlyValue: number;
+  totalRevenue: number;
+}
+
+// Campaign ROI Input
+export interface CampaignROIInput {
+  campaignCost: number;
+  revenue: number;
+  additionalMetrics?: {
+    impressions?: number;
+    clicks?: number;
+    conversions?: number;
+  };
+}
+
+// Campaign ROI Result
+export interface CampaignROIResult extends CalculatorResult {
+  roi: number;
+  roiPercentage: number;
+  profit: number;
+  roas: number;
+  rating: 'excellent' | 'good' | 'break-even' | 'loss';
 }
