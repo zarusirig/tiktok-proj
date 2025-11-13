@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { Card } from '@/components/ui/Card';
-import { FAQSection } from '@/components/FAQSection';
+import { FAQSection } from '@/components/calculator/FAQSection';
 
 export const metadata: Metadata = {
   title: 'TikTok Sponsorship Disclosure Guidelines: FTC Compliance (2025)',
@@ -175,7 +175,8 @@ export default function SponsorshipDisclosurePage() {
           </div>
         </Card>
 
-        <FAQSection title="Frequently Asked Questions" faqs={faqs} />
+        <h2 className="text-heading-lg font-semibold text-neutral-900 mb-6">Frequently Asked Questions</h2>
+        <FAQSection pageName="Sponsorship Disclosure" faqs={faqs} />
 
         <Card>
           <h3 className="text-heading-md font-semibold text-neutral-900 mb-4">Related Resources</h3>
