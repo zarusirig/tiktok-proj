@@ -17,7 +17,7 @@ export default function BrandDealContractTemplatePage() {
     },
     {
       question: 'What if the brand has their own contract?',
-      answer: 'Read it carefully! Brands often include creator-unfavorable terms. Negotiate or counter with your own contract. Larger brands may not budge—decide if deal is worth it.',
+      answer: 'Read it carefully! Brands often include creator-unfavorable terms. Negotiate or counter with your own contract. Larger brands may not budge-decide if deal is worth it.',
     },
     {
       question: 'Can I send this contract as a freelancer, or do I need an LLC?',
@@ -40,13 +40,13 @@ export default function BrandDealContractTemplatePage() {
   const redFlags = [
     {
       clause: '"Payment contingent on video reaching X views"',
-      why: 'You can\'t control algorithm—too risky',
+      why: 'You can\'t control algorithm-too risky',
       counter: 'Guaranteed payment + optional performance bonus',
     },
     {
       clause: '"Brand owns all rights to content in perpetuity"',
       why: 'You lose portfolio piece and can\'t repost',
-      counter: 'Non-exclusive license for 90 days–1 year',
+      counter: 'Non-exclusive license for 90 days-1 year',
     },
     {
       clause: '"Brand may use content for any purpose, including sublicensing to third parties"',
@@ -56,7 +56,7 @@ export default function BrandDealContractTemplatePage() {
     {
       clause: '"Creator may not work with any other brands for 12 months"',
       why: 'Full exclusivity for extended period kills your income',
-      counter: 'Category exclusivity for 30–90 days max, or charge 10× rate',
+      counter: 'Category exclusivity for 30-90 days max, or charge 10× rate',
     },
     {
       clause: '"Brand may request unlimited revisions"',
@@ -71,17 +71,18 @@ export default function BrandDealContractTemplatePage() {
     {
       clause: '"Payment within 90 days of posting"',
       why: 'Too long to wait (cash flow issues)',
-      counter: 'Payment within 15–30 days',
+      counter: 'Payment within 15-30 days',
     },
     {
       clause: '"Brand may terminate at any time without compensation"',
       why: 'Brand can cancel after you\'ve done work and not pay',
-      counter: 'If brand cancels after work begins, pays 50–100%',
+      counter: 'If brand cancels after work begins, pays 50-100%',
     },
   ];
 
   return (
     <div className="min-h-screen bg-neutral-50">
+
       {/* Breadcrumb */}
       <nav className="bg-white border-b border-neutral-200 py-3">
         <div className="container-custom">
@@ -332,7 +333,7 @@ Date: _______________________`}
               <h3 className="font-semibold text-neutral-900 mb-2">Section 3: Compensation</h3>
               <p className="text-body-sm text-neutral-700 mb-2"><strong>Best payment structure:</strong> 50% upfront, 50% upon posting (protects creators)</p>
               <p className="text-body-sm text-neutral-700 mb-2"><strong>Avoid:</strong> Payment contingent on views/engagement (you can't control algorithm)</p>
-              <p className="text-body-sm text-neutral-700"><strong>Late payment clause:</strong> Always include—motivates timely payment</p>
+              <p className="text-body-sm text-neutral-700"><strong>Late payment clause:</strong> Always include-motivates timely payment</p>
             </div>
 
             <div className="p-4 bg-neutral-50 rounded-lg border border-neutral-200">
@@ -341,16 +342,16 @@ Date: _______________________`}
               <p className="text-body-sm text-neutral-700 mb-2"><strong>Duration options:</strong></p>
               <ul className="text-body-sm text-neutral-700 space-y-1 ml-4 list-disc">
                 <li>90 days: Fair for most campaigns</li>
-                <li>1 year: Charge +25–50% more</li>
-                <li>Perpetuity: Charge +100–200% more (or avoid)</li>
+                <li>1 year: Charge +25-50% more</li>
+                <li>Perpetuity: Charge +100-200% more (or avoid)</li>
               </ul>
-              <p className="text-body-sm text-neutral-700"><strong>Spark Ads:</strong> If brand can use as paid ads, charge +30–50% extra</p>
+              <p className="text-body-sm text-neutral-700"><strong>Spark Ads:</strong> If brand can use as paid ads, charge +30-50% extra</p>
             </div>
 
             <div className="p-4 bg-neutral-50 rounded-lg border border-neutral-200">
               <h3 className="font-semibold text-neutral-900 mb-2">Section 5: Exclusivity</h3>
               <p className="text-body-sm text-neutral-700 mb-2"><strong>No exclusivity (most common):</strong> You can work with any brands anytime</p>
-              <p className="text-body-sm text-neutral-700 mb-2"><strong>Category exclusivity:</strong> Can't promote competing brands for X days—charge +25–50% more</p>
+              <p className="text-body-sm text-neutral-700 mb-2"><strong>Category exclusivity:</strong> Can't promote competing brands for X days-charge +25-50% more</p>
               <p className="text-body-sm text-neutral-700"><strong>Pro tip:</strong> Define "competing brands" explicitly to avoid confusion</p>
             </div>
 
@@ -364,7 +365,7 @@ Date: _______________________`}
             <div className="p-4 bg-red-50 border border-red-200 rounded-lg">
               <h3 className="font-semibold text-red-900 mb-2">Section 7: FTC Disclosure</h3>
               <p className="text-body-sm text-red-800 mb-2"><strong>Non-negotiable:</strong> You must disclose sponsorships per FTC rules</p>
-              <p className="text-body-sm text-red-800"><strong>If brand asks you to hide sponsorship:</strong> Refuse—it's illegal and puts you at risk</p>
+              <p className="text-body-sm text-red-800"><strong>If brand asks you to hide sponsorship:</strong> Refuse-it's illegal and puts you at risk</p>
             </div>
           </div>
         </Card>
@@ -411,7 +412,7 @@ Date: _______________________`}
                 <div className="p-4 bg-neutral-50 rounded-lg border border-neutral-200">
                   <h4 className="font-semibold text-neutral-900 mb-2">Paid Options:</h4>
                   <ul className="text-body-sm text-neutral-700 space-y-1 ml-4 list-disc">
-                    <li>DocuSign (industry standard, $10–40/month)</li>
+                    <li>DocuSign (industry standard, $10-40/month)</li>
                     <li>HelloSign Pro ($15/month)</li>
                     <li>Adobe Sign ($12.99/month)</li>
                   </ul>
@@ -460,8 +461,8 @@ Date: _______________________`}
           </div>
           <div className="mt-4 p-4 bg-blue-50 border border-blue-200 rounded-lg">
             <p className="text-body-sm text-blue-900">
-              <strong>Cost:</strong> Entertainment lawyers charge $200–500/hour. Contract review: 1–2 hours ($200–1,000 typically).
-              Worth it when deal is large enough that legal fees are <10% of deal value.
+              <strong>Cost:</strong> Entertainment lawyers charge $200-500/hour. Contract review: 1-2 hours ($200-1,000 typically).
+              Worth it when deal is large enough that legal fees are &lt;10% of deal value.
             </p>
           </div>
         </Card>
@@ -486,9 +487,9 @@ Date: _______________________`}
             <div>
               <h3 className="font-semibold text-neutral-900 mb-2">Learn more:</h3>
               <ul className="text-body-sm text-neutral-700 space-y-1 ml-4 list-disc">
-                <li><Link href="/guides/how-to-get-brand-deals" className="text-blue-600 hover:underline">How to Get Brand Deals on TikTok</Link> — Find partnership opportunities</li>
-                <li><Link href="/calculators/brand-deal-rate" className="text-blue-600 hover:underline">TikTok Brand Deal Rate Calculator</Link> — Price your services</li>
-                <li><Link href="/compliance/sponsorship-disclosure" className="text-blue-600 hover:underline">Sponsorship Disclosure Guidelines</Link> — FTC compliance</li>
+                <li><Link href="/guides/how-to-get-brand-deals" className="text-blue-600 hover:underline">How to Get Brand Deals on TikTok</Link> - Find partnership opportunities</li>
+                <li><Link href="/calculators/brand-deal-rate" className="text-blue-600 hover:underline">TikTok Brand Deal Rate Calculator</Link> - Price your services</li>
+                <li><Link href="/compliance/sponsorship-disclosure" className="text-blue-600 hover:underline">Sponsorship Disclosure Guidelines</Link> - FTC compliance</li>
               </ul>
             </div>
           </div>
