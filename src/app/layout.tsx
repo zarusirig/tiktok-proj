@@ -4,6 +4,8 @@ import '@/styles/globals.css';
 import Script from 'next/script';
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
+import { WebVitals } from '@/components/performance/WebVitals';
+import { ErrorBoundary } from '@/components/error/ErrorBoundary';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -72,6 +74,13 @@ export default function RootLayout({
 
   return (
     <html lang="en" className={inter.variable}>
+      <head>
+        {/* Preload critical resources for better performance */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link rel="dns-prefetch" href="//www.google-analytics.com" />
+        <link rel="dns-prefetch" href="//www.googletagmanager.com" />
+      </head>
       <body className="font-sans">
         {GA_MEASUREMENT_ID && (
           <>
@@ -91,10 +100,30 @@ export default function RootLayout({
             </Script>
           </>
         )}
+
+        {/* Service Worker Registration */}
+        <Script id="service-worker" strategy="afterInteractive">
+          {`
+            if ('serviceWorker' in navigator) {
+              window.addEventListener('load', function() {
+                navigator.serviceWorker.register('/sw.js')
+                  .then(function(registration) {
+                    console.log('SW registered: ', registration);
+                  })
+                  .catch(function(registrationError) {
+                    console.log('SW registration failed: ', registrationError);
+                  });
+              });
+            }
+          `}
+        </Script>
         <div className="flex min-h-screen flex-col">
           <Header />
-          <main className="flex-1">{children}</main>
+          <ErrorBoundary>
+            <main className="flex-1">{children}</main>
+          </ErrorBoundary>
           <Footer />
+          <WebVitals />
         </div>
       </body>
     </html>

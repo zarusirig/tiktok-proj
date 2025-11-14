@@ -15,6 +15,25 @@
   *:focus-visible {
     @apply outline-2 outline-offset-2 outline-primary-500;
   }
+
+  /* Performance optimizations */
+  * {
+    /* Prevent layout shifts during font loading */
+    font-display: swap;
+  }
+
+  /* Optimize image rendering */
+  img {
+    @apply transition-opacity duration-300;
+  }
+
+  /* Reduce paint on scroll for better performance */
+  * {
+    /* Use GPU acceleration for transforms */
+    transform: translateZ(0);
+    /* Optimize for will-change property */
+    will-change: auto;
+  }
 }
 
 @layer components {

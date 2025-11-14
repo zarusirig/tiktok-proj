@@ -2,16 +2,46 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
+import dynamic from 'next/dynamic';
 import { Breadcrumb } from '@/components/layout/Breadcrumb';
 import { Card } from '@/components/ui/Card';
 import { Button } from '@/components/ui/Button';
 import { InputField } from '@/components/ui/InputField';
 import { SelectField } from '@/components/ui/SelectField';
-import { MethodologySection } from '@/components/calculator/MethodologySection';
-import { FAQSection } from '@/components/calculator/FAQSection';
-import { RelatedCalculators } from '@/components/calculator/RelatedCalculators';
-import { CalculatorSchema, FAQSchema, BreadcrumbSchema } from '@/components/seo/CalculatorSchema';
-import { PageAuthorByline, PageEEAT } from '@/lib/eeat/page-eeat';
+
+// Dynamically import heavy components for better performance
+const MethodologySection = dynamic(() => import('@/components/calculator/MethodologySection').then(mod => ({ default: mod.MethodologySection })), {
+  loading: () => <div className="animate-pulse bg-neutral-200 h-32 rounded-lg"></div>
+});
+
+const FAQSection = dynamic(() => import('@/components/calculator/FAQSection').then(mod => ({ default: mod.FAQSection })), {
+  loading: () => <div className="animate-pulse bg-neutral-200 h-48 rounded-lg"></div>
+});
+
+const RelatedCalculators = dynamic(() => import('@/components/calculator/RelatedCalculators').then(mod => ({ default: mod.RelatedCalculators })), {
+  loading: () => <div className="animate-pulse bg-neutral-200 h-24 rounded-lg"></div>
+});
+
+const CalculatorSchema = dynamic(() => import('@/components/seo/CalculatorSchema').then(mod => ({ default: mod.CalculatorSchema })), {
+  ssr: false
+});
+
+const FAQSchema = dynamic(() => import('@/components/seo/CalculatorSchema').then(mod => ({ default: mod.FAQSchema })), {
+  ssr: false
+});
+
+const BreadcrumbSchema = dynamic(() => import('@/components/seo/CalculatorSchema').then(mod => ({ default: mod.BreadcrumbSchema })), {
+  ssr: false
+});
+
+const PageAuthorByline = dynamic(() => import('@/lib/eeat/page-eeat').then(mod => ({ default: mod.PageAuthorByline })), {
+  ssr: false
+});
+
+const PageEEAT = dynamic(() => import('@/lib/eeat/page-eeat').then(mod => ({ default: mod.PageEEAT })), {
+  ssr: false
+});
+
 import {
   calculateCreatorFund,
   validateCreatorFundInput,
