@@ -36,7 +36,6 @@ export const CALCULATOR_SCHEMAS: Record<string, CalculatorSchemaConfig> = {
     slug: 'engagement-rate',
     keywords: ['tiktok engagement rate', 'engagement calculator', 'tiktok metrics', 'engagement percentage'],
     datePublished: '2024-01-15',
-    dateModified: '2025-11-13',
     aggregateRating: { ratingValue: 4.9, reviewCount: 2134 },
   },
   'brand-deal-rate': {
@@ -45,7 +44,6 @@ export const CALCULATOR_SCHEMAS: Record<string, CalculatorSchemaConfig> = {
     slug: 'brand-deal-rate',
     keywords: ['brand deal calculator', 'influencer rate calculator', 'sponsored post pricing', 'tiktok sponsorship rates'],
     datePublished: '2024-01-15',
-    dateModified: '2025-11-13',
     aggregateRating: { ratingValue: 4.7, reviewCount: 1856 },
   },
   'live-gifts': {
@@ -54,7 +52,6 @@ export const CALCULATOR_SCHEMAS: Record<string, CalculatorSchemaConfig> = {
     slug: 'live-gifts',
     keywords: ['tiktok live gifts calculator', 'tiktok diamonds', 'live stream earnings', 'gift conversion'],
     datePublished: '2024-01-20',
-    dateModified: '2025-11-13',
     aggregateRating: { ratingValue: 4.6, reviewCount: 892 },
   },
   'tiktok-money': {
@@ -63,7 +60,6 @@ export const CALCULATOR_SCHEMAS: Record<string, CalculatorSchemaConfig> = {
     slug: 'tiktok-money',
     keywords: ['tiktok money calculator', 'tiktok earnings', 'how much money tiktok', 'tiktok income calculator'],
     datePublished: '2024-01-15',
-    dateModified: '2025-11-13',
     aggregateRating: { ratingValue: 4.8, reviewCount: 3421 },
   },
   'rpm': {
@@ -72,7 +68,6 @@ export const CALCULATOR_SCHEMAS: Record<string, CalculatorSchemaConfig> = {
     slug: 'rpm',
     keywords: ['tiktok rpm calculator', 'revenue per mille', 'tiktok rpm rate', 'views to earnings'],
     datePublished: '2024-01-20',
-    dateModified: '2025-11-13',
     aggregateRating: { ratingValue: 4.7, reviewCount: 1543 },
   },
   'shop-commission': {
@@ -81,7 +76,6 @@ export const CALCULATOR_SCHEMAS: Record<string, CalculatorSchemaConfig> = {
     slug: 'shop-commission',
     keywords: ['tiktok shop calculator', 'tiktok affiliate commission', 'shop earnings', 'product commission'],
     datePublished: '2024-02-01',
-    dateModified: '2025-11-13',
     aggregateRating: { ratingValue: 4.5, reviewCount: 734 },
   },
   'coins': {
@@ -90,7 +84,6 @@ export const CALCULATOR_SCHEMAS: Record<string, CalculatorSchemaConfig> = {
     slug: 'coins',
     keywords: ['tiktok coins calculator', 'coins to money', 'diamond conversion', 'tiktok currency'],
     datePublished: '2024-01-25',
-    dateModified: '2025-11-13',
     aggregateRating: { ratingValue: 4.6, reviewCount: 1234 },
   },
   'video-performance': {
@@ -99,7 +92,6 @@ export const CALCULATOR_SCHEMAS: Record<string, CalculatorSchemaConfig> = {
     slug: 'video-performance',
     keywords: ['video performance calculator', 'tiktok views predictor', 'video success calculator'],
     datePublished: '2024-02-10',
-    dateModified: '2025-11-13',
     aggregateRating: { ratingValue: 4.4, reviewCount: 567 },
   },
   'follower-growth': {
@@ -108,7 +100,6 @@ export const CALCULATOR_SCHEMAS: Record<string, CalculatorSchemaConfig> = {
     slug: 'follower-growth',
     keywords: ['follower growth calculator', 'tiktok growth projector', 'follower prediction'],
     datePublished: '2024-02-05',
-    dateModified: '2025-11-13',
     aggregateRating: { ratingValue: 4.5, reviewCount: 823 },
   },
   'watch-time': {
@@ -117,7 +108,6 @@ export const CALCULATOR_SCHEMAS: Record<string, CalculatorSchemaConfig> = {
     slug: 'watch-time',
     keywords: ['watch time calculator', 'tiktok completion rate', 'average watch time'],
     datePublished: '2024-02-15',
-    dateModified: '2025-11-13',
     aggregateRating: { ratingValue: 4.6, reviewCount: 645 },
   },
   'viral-potential': {
@@ -126,7 +116,6 @@ export const CALCULATOR_SCHEMAS: Record<string, CalculatorSchemaConfig> = {
     slug: 'viral-potential',
     keywords: ['viral potential calculator', 'tiktok viral score', 'virality predictor'],
     datePublished: '2024-02-20',
-    dateModified: '2025-11-13',
     aggregateRating: { ratingValue: 4.7, reviewCount: 1923 },
   },
   'completion-rate': {
@@ -135,7 +124,6 @@ export const CALCULATOR_SCHEMAS: Record<string, CalculatorSchemaConfig> = {
     slug: 'completion-rate',
     keywords: ['completion rate calculator', 'tiktok completion', 'watch through rate'],
     datePublished: '2024-02-25',
-    dateModified: '2025-11-13',
     aggregateRating: { ratingValue: 4.5, reviewCount: 456 },
   },
   'ad-revenue': {
@@ -144,7 +132,6 @@ export const CALCULATOR_SCHEMAS: Record<string, CalculatorSchemaConfig> = {
     slug: 'ad-revenue',
     keywords: ['tiktok ad revenue', 'ad earnings calculator', 'tiktok ads calculator'],
     datePublished: '2024-03-01',
-    dateModified: '2025-11-13',
     aggregateRating: { ratingValue: 4.4, reviewCount: 378 },
   },
   'sponsorship-roi': {
@@ -153,7 +140,6 @@ export const CALCULATOR_SCHEMAS: Record<string, CalculatorSchemaConfig> = {
     slug: 'sponsorship-roi',
     keywords: ['sponsorship roi calculator', 'brand deal roi', 'partnership calculator'],
     datePublished: '2024-03-05',
-    dateModified: '2025-11-13',
     aggregateRating: { ratingValue: 4.6, reviewCount: 512 },
   },
   'content-value': {
@@ -162,7 +148,6 @@ export const CALCULATOR_SCHEMAS: Record<string, CalculatorSchemaConfig> = {
     slug: 'content-value',
     keywords: ['content value calculator', 'post value', 'tiktok content worth'],
     datePublished: '2024-03-10',
-    dateModified: '2025-11-13',
     aggregateRating: { ratingValue: 4.5, reviewCount: 423 },
   },
   'niche-profitability': {
@@ -171,7 +156,6 @@ export const CALCULATOR_SCHEMAS: Record<string, CalculatorSchemaConfig> = {
     slug: 'niche-profitability',
     keywords: ['niche profitability', 'tiktok niche calculator', 'best niches'],
     datePublished: '2024-03-15',
-    dateModified: '2025-11-13',
     aggregateRating: { ratingValue: 4.7, reviewCount: 789 },
   },
   'production-cost': {
@@ -180,7 +164,6 @@ export const CALCULATOR_SCHEMAS: Record<string, CalculatorSchemaConfig> = {
     slug: 'production-cost',
     keywords: ['production cost calculator', 'content cost', 'video production roi'],
     datePublished: '2024-03-20',
-    dateModified: '2025-11-13',
     aggregateRating: { ratingValue: 4.4, reviewCount: 234 },
   },
   'creator-tax': {
@@ -189,7 +172,6 @@ export const CALCULATOR_SCHEMAS: Record<string, CalculatorSchemaConfig> = {
     slug: 'creator-tax',
     keywords: ['creator tax calculator', 'influencer taxes', 'tiktok income tax'],
     datePublished: '2024-03-25',
-    dateModified: '2025-11-13',
     aggregateRating: { ratingValue: 4.6, reviewCount: 567 },
   },
   'break-even': {
@@ -198,7 +180,6 @@ export const CALCULATOR_SCHEMAS: Record<string, CalculatorSchemaConfig> = {
     slug: 'break-even',
     keywords: ['break-even calculator', 'tiktok break even', 'roi calculator'],
     datePublished: '2024-03-30',
-    dateModified: '2025-11-13',
     aggregateRating: { ratingValue: 4.5, reviewCount: 345 },
   },
   'follower-conversion': {
@@ -207,7 +188,6 @@ export const CALCULATOR_SCHEMAS: Record<string, CalculatorSchemaConfig> = {
     slug: 'follower-conversion',
     keywords: ['follower conversion calculator', 'view to follower rate', 'conversion rate'],
     datePublished: '2024-04-01',
-    dateModified: '2025-11-13',
     aggregateRating: { ratingValue: 4.6, reviewCount: 678 },
   },
   'share-ratio': {
@@ -216,7 +196,6 @@ export const CALCULATOR_SCHEMAS: Record<string, CalculatorSchemaConfig> = {
     slug: 'share-ratio',
     keywords: ['share ratio calculator', 'share to view', 'tiktok shares'],
     datePublished: '2024-04-05',
-    dateModified: '2025-11-13',
     aggregateRating: { ratingValue: 4.5, reviewCount: 432 },
   },
   'save-rate': {
@@ -225,7 +204,6 @@ export const CALCULATOR_SCHEMAS: Record<string, CalculatorSchemaConfig> = {
     slug: 'save-rate',
     keywords: ['save rate calculator', 'tiktok saves', 'bookmark rate'],
     datePublished: '2024-04-10',
-    dateModified: '2025-11-13',
     aggregateRating: { ratingValue: 4.6, reviewCount: 523 },
   },
   'profile-visit-rate': {
@@ -234,7 +212,6 @@ export const CALCULATOR_SCHEMAS: Record<string, CalculatorSchemaConfig> = {
     slug: 'profile-visit-rate',
     keywords: ['profile visit rate', 'profile views calculator', 'visitor rate'],
     datePublished: '2024-04-15',
-    dateModified: '2025-11-13',
     aggregateRating: { ratingValue: 4.5, reviewCount: 412 },
   },
   'hashtag-performance': {
@@ -243,7 +220,6 @@ export const CALCULATOR_SCHEMAS: Record<string, CalculatorSchemaConfig> = {
     slug: 'hashtag-performance',
     keywords: ['hashtag calculator', 'hashtag performance', 'tiktok hashtags'],
     datePublished: '2024-04-20',
-    dateModified: '2025-11-13',
     aggregateRating: { ratingValue: 4.7, reviewCount: 892 },
   },
   'posting-time': {
@@ -252,7 +228,6 @@ export const CALCULATOR_SCHEMAS: Record<string, CalculatorSchemaConfig> = {
     slug: 'posting-time',
     keywords: ['best posting time', 'tiktok posting schedule', 'optimal post time'],
     datePublished: '2024-04-25',
-    dateModified: '2025-11-13',
     aggregateRating: { ratingValue: 4.8, reviewCount: 1234 },
   },
   'content-calendar-roi': {
@@ -261,7 +236,6 @@ export const CALCULATOR_SCHEMAS: Record<string, CalculatorSchemaConfig> = {
     slug: 'content-calendar-roi',
     keywords: ['content calendar roi', 'posting strategy roi', 'content planning'],
     datePublished: '2024-05-01',
-    dateModified: '2025-11-13',
     aggregateRating: { ratingValue: 4.5, reviewCount: 345 },
   },
   'multi-platform-earnings': {
@@ -270,7 +244,6 @@ export const CALCULATOR_SCHEMAS: Record<string, CalculatorSchemaConfig> = {
     slug: 'multi-platform-earnings',
     keywords: ['multi platform calculator', 'platform comparison', 'cross platform earnings'],
     datePublished: '2024-05-05',
-    dateModified: '2025-11-13',
     aggregateRating: { ratingValue: 4.7, reviewCount: 1567 },
   },
   'cpm-cpv': {
@@ -279,7 +252,6 @@ export const CALCULATOR_SCHEMAS: Record<string, CalculatorSchemaConfig> = {
     slug: 'cpm-cpv',
     keywords: ['tiktok cpm calculator', 'cpv calculator', 'ad cost calculator', 'tiktok advertising'],
     datePublished: '2025-11-13',
-    dateModified: '2025-11-13',
     aggregateRating: { ratingValue: 4.6, reviewCount: 234 },
   },
   'affiliate-commission': {
@@ -288,7 +260,6 @@ export const CALCULATOR_SCHEMAS: Record<string, CalculatorSchemaConfig> = {
     slug: 'affiliate-commission',
     keywords: ['tiktok affiliate calculator', 'shop affiliate earnings', 'commission calculator', 'affiliate income'],
     datePublished: '2025-11-13',
-    dateModified: '2025-11-13',
     aggregateRating: { ratingValue: 4.7, reviewCount: 456 },
   },
   'conversion-rate': {
@@ -297,7 +268,6 @@ export const CALCULATOR_SCHEMAS: Record<string, CalculatorSchemaConfig> = {
     slug: 'conversion-rate',
     keywords: ['conversion rate calculator', 'tiktok conversion', 'traffic conversion', 'conversion optimization'],
     datePublished: '2025-11-13',
-    dateModified: '2025-11-13',
     aggregateRating: { ratingValue: 4.5, reviewCount: 389 },
   },
   'customer-acquisition-cost': {
@@ -306,7 +276,6 @@ export const CALCULATOR_SCHEMAS: Record<string, CalculatorSchemaConfig> = {
     slug: 'customer-acquisition-cost',
     keywords: ['cac calculator', 'customer acquisition cost', 'tiktok cac', 'marketing roi'],
     datePublished: '2025-11-13',
-    dateModified: '2025-11-13',
     aggregateRating: { ratingValue: 4.6, reviewCount: 312 },
   },
   'lifetime-value': {
@@ -315,7 +284,6 @@ export const CALCULATOR_SCHEMAS: Record<string, CalculatorSchemaConfig> = {
     slug: 'lifetime-value',
     keywords: ['ltv calculator', 'customer lifetime value', 'customer value', 'retention metrics'],
     datePublished: '2025-11-13',
-    dateModified: '2025-11-13',
     aggregateRating: { ratingValue: 4.7, reviewCount: 521 },
   },
   'campaign-roi': {
@@ -324,7 +292,6 @@ export const CALCULATOR_SCHEMAS: Record<string, CalculatorSchemaConfig> = {
     slug: 'campaign-roi',
     keywords: ['campaign roi calculator', 'tiktok roi', 'marketing roi', 'roas calculator'],
     datePublished: '2025-11-13',
-    dateModified: '2025-11-13',
     aggregateRating: { ratingValue: 4.8, reviewCount: 678 },
   },
 };

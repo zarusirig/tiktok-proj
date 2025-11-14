@@ -259,3 +259,239 @@ export function WebSiteSchema() {
     />
   );
 }
+
+// Person Schema for authors
+export interface PersonSchemaProps {
+  name: string;
+  jobTitle: string;
+  description: string;
+  url?: string;
+  sameAs?: string[];
+  knowsAbout?: string[];
+  affiliation?: {
+    name: string;
+    url: string;
+  };
+}
+
+export function PersonSchema({
+  name,
+  jobTitle,
+  description,
+  url,
+  sameAs,
+  knowsAbout,
+  affiliation,
+}: PersonSchemaProps) {
+  const schema = {
+    '@context': 'https://schema.org',
+    '@type': 'Person',
+    name,
+    jobTitle,
+    description,
+    ...(url && { url }),
+    ...(sameAs && { sameAs }),
+    ...(knowsAbout && { knowsAbout }),
+    ...(affiliation && {
+      affiliation: {
+        '@type': 'Organization',
+        name: affiliation.name,
+        url: affiliation.url,
+      },
+    }),
+  };
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+    />
+  );
+}
+
+// HowTo Schema for guides
+export interface HowToStep {
+  name: string;
+  text: string;
+  url?: string;
+}
+
+export interface HowToSchemaProps {
+  name: string;
+  description: string;
+  image?: string;
+  totalTime?: string;
+  estimatedCost?: {
+    value: string;
+    currency: string;
+  };
+  tool?: string[];
+  supply?: string[];
+  steps: HowToStep[];
+}
+
+export function HowToSchema({
+  name,
+  description,
+  image,
+  totalTime,
+  estimatedCost,
+  tool,
+  supply,
+  steps,
+}: HowToSchemaProps) {
+  const schema = {
+    '@context': 'https://schema.org',
+    '@type': 'HowTo',
+    name,
+    description,
+    ...(image && { image }),
+    ...(totalTime && { totalTime }),
+    ...(estimatedCost && {
+      estimatedCost: {
+        '@type': 'MonetaryAmount',
+        value: estimatedCost.value,
+        currency: estimatedCost.currency,
+      },
+    }),
+    ...(tool && { tool }),
+    ...(supply && { supply }),
+    step: steps.map((step, index) => ({
+      '@type': 'HowToStep',
+      position: index + 1,
+      name: step.name,
+      text: step.text,
+      ...(step.url && { url: step.url }),
+    })),
+  };
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+    />
+  );
+}
+
+// Review Schema for tools and calculators
+export interface ReviewSchemaProps {
+  itemReviewed: {
+    name: string;
+    type: string;
+  };
+  reviewRating: {
+    ratingValue: number;
+    bestRating: number;
+    worstRating: number;
+  };
+  author: {
+    name: string;
+    type?: string;
+  };
+  reviewBody?: string;
+  datePublished?: string;
+}
+
+export function ReviewSchema({
+  itemReviewed,
+  reviewRating,
+  author,
+  reviewBody,
+  datePublished,
+}: ReviewSchemaProps) {
+  const schema = {
+    '@context': 'https://schema.org',
+    '@type': 'Review',
+    itemReviewed: {
+      '@type': itemReviewed.type || 'SoftwareApplication',
+      name: itemReviewed.name,
+    },
+    reviewRating: {
+      '@type': 'Rating',
+      ratingValue: reviewRating.ratingValue.toString(),
+      bestRating: reviewRating.bestRating.toString(),
+      worstRating: reviewRating.worstRating.toString(),
+    },
+    author: {
+      '@type': author.type || 'Organization',
+      name: author.name,
+    },
+    ...(reviewBody && { reviewBody }),
+    ...(datePublished && { datePublished }),
+  };
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+    />
+  );
+}
+
+// NewsArticle Schema for news pages
+export interface NewsArticleSchemaProps {
+  headline: string;
+  description: string;
+  url: string;
+  datePublished: string;
+  dateModified: string;
+  author?: {
+    name: string;
+    url?: string;
+  };
+  image?: string;
+  keywords?: string[];
+  articleBody?: string;
+}
+
+export function NewsArticleSchema({
+  headline,
+  description,
+  url,
+  datePublished,
+  dateModified,
+  author = { name: 'TikTok Calculator', url: 'https://tiktokcalculator.com' },
+  image,
+  keywords,
+  articleBody,
+}: NewsArticleSchemaProps) {
+  const schema = {
+    '@context': 'https://schema.org',
+    '@type': 'NewsArticle',
+    headline,
+    description,
+    url,
+    datePublished,
+    dateModified,
+    author: {
+      '@type': 'Organization',
+      name: author.name,
+      url: author.url,
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: 'TikTok Calculator',
+      url: 'https://tiktokcalculator.com',
+      logo: {
+        '@type': 'ImageObject',
+        url: 'https://tiktokcalculator.com/logo.png',
+      },
+    },
+    ...(image && {
+      image: {
+        '@type': 'ImageObject',
+        url: image,
+      },
+    }),
+    ...(keywords && { keywords: keywords.join(', ') }),
+    ...(articleBody && { articleBody }),
+    inLanguage: 'en-US',
+  };
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+    />
+  );
+}
