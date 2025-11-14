@@ -46,7 +46,6 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://calculatecreator.com',
     title: 'TikTok Creator Calculator - Earnings & Analytics Tools',
     description:
       'Free TikTok calculators for creators: estimate earnings, engagement rates, brand deal rates, and more.',
