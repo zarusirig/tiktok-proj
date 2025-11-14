@@ -257,7 +257,7 @@ export default function CreatorFundGuidePage() {
           <Card className="mb-6">
             <h3 className="text-heading-md font-semibold text-neutral-900 mb-4">RPM by Content Niche</h3>
             <p className="text-body-md text-neutral-700 mb-4">
-              Different content niches have different RPM rates due to advertiser demand and audience value:
+              Different content niches have different RPM rates due to advertiser demand and audience value. See our <Link href="/data/rpm-rates-by-niche" className="text-primary-600 hover:text-primary-700 underline font-medium">complete RPM rates by niche data</Link> for detailed breakdowns:
             </p>
             <div className="space-y-2">
               {nicheRPM.map((niche) => (
@@ -311,6 +311,68 @@ export default function CreatorFundGuidePage() {
           ]}
         />
 
+        {/* Related Guides */}
+        <div className="mt-12 p-6 bg-neutral-100 rounded-xl">
+          <h3 className="text-heading-lg font-semibold text-neutral-900 mb-4">Related Creator Fund Resources</h3>
+          <div className="grid md:grid-cols-2 gap-4">
+            <Link href="/guides/how-to-join-creator-fund" className="p-4 bg-white rounded-lg hover:shadow-md transition-shadow">
+              <h4 className="font-semibold text-neutral-900 mb-2">How to Join Creator Fund</h4>
+              <p className="text-body-sm text-neutral-600">Step-by-step application process and requirements</p>
+            </Link>
+            <Link href="/guides/how-to-increase-creator-fund-earnings" className="p-4 bg-white rounded-lg hover:shadow-md transition-shadow">
+              <h4 className="font-semibold text-neutral-900 mb-2">How to Increase Creator Fund Earnings</h4>
+              <p className="text-body-sm text-neutral-600">Proven strategies to maximize your RPM</p>
+            </Link>
+            <Link href="/guides/maximize-creator-fund-rpm" className="p-4 bg-white rounded-lg hover:shadow-md transition-shadow">
+              <h4 className="font-semibold text-neutral-900 mb-2">Maximize Your RPM Rate</h4>
+              <p className="text-body-sm text-neutral-600">Advanced tactics for premium Creator Fund earnings</p>
+            </Link>
+            <Link href="/guides/why-creator-fund-earnings-dropped" className="p-4 bg-white rounded-lg hover:shadow-md transition-shadow">
+              <h4 className="font-semibold text-neutral-900 mb-2">Why Creator Fund Earnings Dropped</h4>
+              <p className="text-body-sm text-neutral-600">Troubleshoot declining payouts and fix issues</p>
+            </Link>
+          </div>
+        </div>
+
+        {/* Comparison Pages */}
+        <div className="mt-8 p-6 bg-accent-50 rounded-xl border border-accent-200">
+          <h3 className="text-heading-lg font-semibold text-neutral-900 mb-4">Compare Creator Fund to Other Income Streams</h3>
+          <div className="grid md:grid-cols-2 gap-4">
+            <Link href="/comparisons/creator-fund-vs-brand-deals" className="p-4 bg-white rounded-lg hover:shadow-md transition-shadow">
+              <h4 className="font-semibold text-neutral-900 mb-2">Creator Fund vs Brand Deals</h4>
+              <p className="text-body-sm text-neutral-600">Which income stream should you prioritize?</p>
+            </Link>
+            <Link href="/comparisons/creator-fund-vs-youtube" className="p-4 bg-white rounded-lg hover:shadow-md transition-shadow">
+              <h4 className="font-semibold text-neutral-900 mb-2">TikTok vs YouTube Partner Program</h4>
+              <p className="text-body-sm text-neutral-600">Compare RPM rates and earning potential</p>
+            </Link>
+          </div>
+        </div>
+
+        {/* Calculators */}
+        <div className="mt-8 p-6 bg-primary-50 rounded-xl border border-primary-200">
+          <h3 className="text-heading-lg font-semibold text-neutral-900 mb-4">Essential Calculators</h3>
+          <div className="grid md:grid-cols-3 gap-4">
+            <Link href="/calculators/tiktok-creator-fund" className="p-4 bg-white rounded-lg hover:shadow-md transition-shadow">
+              <h4 className="font-semibold text-primary-600 mb-2">💰 Creator Fund Calculator</h4>
+              <p className="text-body-sm text-neutral-600">Estimate your monthly earnings</p>
+            </Link>
+            <Link href="/calculators/rpm" className="p-4 bg-white rounded-lg hover:shadow-md transition-shadow">
+              <h4 className="font-semibold text-primary-600 mb-2">📊 RPM Calculator</h4>
+              <p className="text-body-sm text-neutral-600">Calculate your revenue per 1K views</p>
+            </Link>
+            <Link href="/calculators/engagement-rate" className="p-4 bg-white rounded-lg hover:shadow-md transition-shadow">
+              <h4 className="font-semibold text-primary-600 mb-2">📈 Engagement Rate Calculator</h4>
+              <p className="text-body-sm text-neutral-600">Measure performance to optimize earnings</p>
+            </Link>
+          </div>
+        </div>
+
+        {/* Back to Main Guide */}
+        <div className="mt-8 text-center">
+          <Link href="/guides/how-to-make-money-on-tiktok" className="inline-flex items-center text-primary-600 hover:text-primary-700 font-medium">
+            ← Back to Complete TikTok Monetization Guide
+          </Link>
         {/* E-E-A-T Section */}
         <div className="mt-12">
           <PageEEAT pageSlug="tiktok-creator-fund-guide" variant="full" />

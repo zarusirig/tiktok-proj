@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
+import Link from 'next/link';
 import { Breadcrumb } from '@/components/layout/Breadcrumb';
 import { Card } from '@/components/ui/Card';
 import { Button } from '@/components/ui/Button';
@@ -131,8 +132,11 @@ export default function CreatorFundCalculatorPage() {
           <h1 className="text-display-md md:text-display-lg font-bold text-neutral-900 mb-4">
             TikTok Creator Fund Calculator
           </h1>
-          <p className="text-body-lg text-neutral-600 max-w-2xl mx-auto">
+          <p className="text-body-lg text-neutral-600 max-w-2xl mx-auto mb-3">
             Estimate your monthly and annual earnings from the TikTok Creator Fund based on your views, engagement rate, and content niche.
+          </p>
+          <p className="text-body-md text-neutral-600 max-w-2xl mx-auto">
+            Want to understand <Link href="/guides/tiktok-creator-fund" className="text-primary-600 hover:text-primary-700 underline font-medium">how the Creator Fund works</Link>? Or explore <Link href="/guides/how-to-make-money-on-tiktok" className="text-primary-600 hover:text-primary-700 underline font-medium">all TikTok monetization methods</Link> including higher-paying alternatives.
           </p>
         </div>
 
@@ -237,7 +241,7 @@ export default function CreatorFundCalculatorPage() {
                 Creator Fund Eligibility
               </h2>
               <p className="text-body-md text-neutral-700 mb-4">
-                To qualify for the TikTok Creator Fund, you must meet these requirements:
+                To qualify for the TikTok Creator Fund, you must meet these requirements. Learn the step-by-step <Link href="/guides/how-to-join-creator-fund" className="text-primary-600 hover:text-primary-700 underline font-medium">application process</Link>:
               </p>
               <div className="space-y-3">
                 {[
@@ -290,6 +294,9 @@ export default function CreatorFundCalculatorPage() {
               <h2 className="text-heading-lg font-semibold text-neutral-900 mb-4">
                 How to Increase Creator Fund Earnings
               </h2>
+              <p className="text-body-md text-neutral-700 mb-4">
+                Learn our <Link href="/guides/how-to-increase-creator-fund-earnings" className="text-primary-600 hover:text-primary-700 underline font-medium">proven strategies to boost your RPM</Link> and <Link href="/guides/maximize-creator-fund-rpm" className="text-primary-600 hover:text-primary-700 underline font-medium">maximize your Creator Fund income</Link>:
+              </p>
               <div className="space-y-3">
                 {[
                   'Post consistently (1-3 videos per day) to maximize views',
@@ -316,7 +323,7 @@ export default function CreatorFundCalculatorPage() {
                 Creator Fund vs. Other Income Streams
               </h2>
               <p className="text-body-md text-neutral-700 mb-4">
-                The Creator Fund typically pays the <strong>least</strong> of all TikTok monetization methods:
+                The Creator Fund typically pays the <strong>least</strong> of all TikTok monetization methods. Compare with <Link href="/comparisons/creator-fund-vs-brand-deals" className="text-primary-600 hover:text-primary-700 underline font-medium">brand deals</Link> to see which income stream to prioritize:
               </p>
               <div className="space-y-3 text-body-sm">
                 <div className="p-3 bg-neutral-50 rounded-lg">
@@ -326,27 +333,33 @@ export default function CreatorFundCalculatorPage() {
                   </div>
                   <p className="text-neutral-600">Passive, but lowest paying</p>
                 </div>
-                <div className="p-3 bg-neutral-50 rounded-lg">
-                  <div className="flex items-center justify-between mb-1">
-                    <span className="font-semibold text-neutral-900">🤝 Brand Deals</span>
-                    <span className="text-neutral-600">$0.10+ per follower</span>
+                <Link href="/guides/brand-deals" className="block">
+                  <div className="p-3 bg-accent-50 border border-accent-200 rounded-lg hover:shadow-md transition-shadow">
+                    <div className="flex items-center justify-between mb-1">
+                      <span className="font-semibold text-neutral-900">🤝 Brand Deals</span>
+                      <span className="text-neutral-600">$0.10+ per follower</span>
+                    </div>
+                    <p className="text-neutral-600">Highest earnings for most creators</p>
                   </div>
-                  <p className="text-neutral-600">Highest earnings for most creators</p>
-                </div>
-                <div className="p-3 bg-neutral-50 rounded-lg">
-                  <div className="flex items-center justify-between mb-1">
-                    <span className="font-semibold text-neutral-900">🎁 LIVE Gifts</span>
-                    <span className="text-neutral-600">$50–$500+ per stream</span>
+                </Link>
+                <Link href="/guides/tiktok-live" className="block">
+                  <div className="p-3 bg-neutral-50 hover:bg-secondary-50 rounded-lg hover:shadow-md transition-shadow">
+                    <div className="flex items-center justify-between mb-1">
+                      <span className="font-semibold text-neutral-900">🎁 LIVE Gifts</span>
+                      <span className="text-neutral-600">$50–$500+ per stream</span>
+                    </div>
+                    <p className="text-neutral-600">Depends on audience generosity</p>
                   </div>
-                  <p className="text-neutral-600">Depends on audience generosity</p>
-                </div>
-                <div className="p-3 bg-neutral-50 rounded-lg">
-                  <div className="flex items-center justify-between mb-1">
-                    <span className="font-semibold text-neutral-900">🛍️ TikTok Shop</span>
-                    <span className="text-neutral-600">5–20% commission</span>
+                </Link>
+                <Link href="/guides/tiktok-shop-affiliate" className="block">
+                  <div className="p-3 bg-neutral-50 hover:bg-primary-50 rounded-lg hover:shadow-md transition-shadow">
+                    <div className="flex items-center justify-between mb-1">
+                      <span className="font-semibold text-neutral-900">🛍️ TikTok Shop</span>
+                      <span className="text-neutral-600">5–20% commission</span>
+                    </div>
+                    <p className="text-neutral-600">Best for product-focused creators</p>
                   </div>
-                  <p className="text-neutral-600">Best for product-focused creators</p>
-                </div>
+                </Link>
               </div>
             </Card>
           </div>
