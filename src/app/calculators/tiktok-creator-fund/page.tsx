@@ -8,6 +8,7 @@ import { Card } from '@/components/ui/Card';
 import { Button } from '@/components/ui/Button';
 import { InputField } from '@/components/ui/InputField';
 import { SelectField } from '@/components/ui/SelectField';
+import { Loading, CalculatorSkeleton, ProgressBar } from '@/components/ui/Loading';
 
 // Dynamically import heavy components for better performance
 const MethodologySection = dynamic(() => import('@/components/calculator/MethodologySection').then(mod => ({ default: mod.MethodologySection })), {
@@ -60,6 +61,7 @@ export default function CreatorFundCalculatorPage() {
   const [results, setResults] = useState<CreatorFundResult | null>(null);
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [isCalculating, setIsCalculating] = useState(false);
+  const [calculationProgress, setCalculationProgress] = useState(0);
 
   const nicheOptions = Object.entries(NICHE_DISPLAY_NAMES).map(([value, label]) => ({
     value,
@@ -85,7 +87,23 @@ export default function CreatorFundCalculatorPage() {
     }
 
     setIsCalculating(true);
+    setCalculationProgress(0);
+
+    // Simulate calculation progress
+    const progressInterval = setInterval(() => {
+      setCalculationProgress(prev => {
+        if (prev >= 90) {
+          clearInterval(progressInterval);
+          return 90;
+        }
+        return prev + 15;
+      });
+    }, 50);
+
     setTimeout(() => {
+      clearInterval(progressInterval);
+      setCalculationProgress(100);
+
       const result = calculateCreatorFund(inputs);
       setResults(result);
       trackCalculation(
@@ -93,8 +111,12 @@ export default function CreatorFundCalculatorPage() {
         { ...inputs },
         { min_monthly: result.minMonthly, max_monthly: result.maxMonthly, avg_rpm: result.avgRPM }
       );
-      setIsCalculating(false);
-    }, 500);
+
+      setTimeout(() => {
+        setIsCalculating(false);
+        setCalculationProgress(0);
+      }, 200);
+    }, 600);
   };
 
   const faqs = [
@@ -175,7 +197,7 @@ export default function CreatorFundCalculatorPage() {
           <PageAuthorByline pageSlug="tiktok-creator-fund" />
         </div>
 
-        <div className="max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+        <div className="max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 mb-8 lg:mb-12">
           <Card className="lg:sticky lg:top-24 h-fit">
             <h2 className="text-heading-lg font-semibold text-neutral-900 mb-6">
               Calculate Your Creator Fund Earnings
@@ -232,8 +254,18 @@ export default function CreatorFundCalculatorPage() {
               Calculate Earnings
             </Button>
 
-            {results && (
+            {isCalculating && (
               <div className="mt-6 space-y-4">
+                <div className="text-center p-6 bg-gradient-to-br from-neutral-50 to-neutral-100 rounded-xl border-2 border-neutral-200">
+                  <Loading variant="dots" size="lg" className="mb-4" />
+                  <p className="text-label-lg text-neutral-600 mb-3">Calculating Your Earnings...</p>
+                  <ProgressBar progress={calculationProgress} className="max-w-xs mx-auto" />
+                </div>
+              </div>
+            )}
+
+            {results && !isCalculating && (
+              <div className="mt-6 space-y-4 animate-slide-up">
                 <div className="text-center p-6 bg-gradient-to-br from-success-50 to-primary-50 rounded-xl border-2 border-success-200">
                   <p className="text-label-lg text-neutral-600 mb-2">Monthly Earnings</p>
                   <p className="text-display-md font-bold text-success-600">
