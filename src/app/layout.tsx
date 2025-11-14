@@ -6,6 +6,7 @@ import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
 import { WebVitals } from '@/components/performance/WebVitals';
 import { ErrorBoundary } from '@/components/error/ErrorBoundary';
+import { CanonicalHead } from '@/components/seo/CanonicalHead';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -74,6 +75,9 @@ export default function RootLayout({
       <head>
         {/* Google Site Verification */}
         <meta name="google-site-verification" content="w-C9CwLR5pFTw0kjkeKFKIJ-qM3RQGok1qm3Zt8pSwA" />
+
+        {/* Canonical URL - dynamically generated */}
+        <CanonicalHead />
 
         {/* Preload critical resources for better performance */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
