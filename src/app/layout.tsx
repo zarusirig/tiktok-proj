@@ -45,7 +45,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://tiktokcalculator.com',
+    url: 'https://calculatecreator.com',
     title: 'TikTok Creator Calculator - Earnings & Analytics Tools',
     description:
       'Free TikTok calculators for creators: estimate earnings, engagement rates, brand deal rates, and more.',
@@ -58,7 +58,7 @@ export const metadata: Metadata = {
       'Free TikTok calculators for creators: estimate earnings, engagement rates, and more.',
   },
   alternates: {
-    canonical: 'https://tiktokcalculator.com',
+    canonical: 'https://calculatecreator.com',
   },
   verification: {
     google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION || '',
@@ -75,6 +75,9 @@ export default function RootLayout({
   return (
     <html lang="en" className={inter.variable}>
       <head>
+        {/* Google Site Verification */}
+        <meta name="google-site-verification" content="w-C9CwLR5pFTw0kjkeKFKIJ-qM3RQGok1qm3Zt8pSwA" />
+
         {/* Preload critical resources for better performance */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
