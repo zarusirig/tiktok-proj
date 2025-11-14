@@ -193,6 +193,7 @@ export default function DiamondConverterPage() {
                 />
 
                 <SelectField
+                  id="currency"
                   label="Currency"
                   value={inputs.currency}
                   onChange={(value) => handleInputChange('currency', value)}

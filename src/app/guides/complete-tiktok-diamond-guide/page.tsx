@@ -58,7 +58,7 @@ export default function CompleteTikTokDiamondGuidePage() {
         url="https://calculatecreator.com/guides/complete-tiktok-diamond-guide"
         datePublished="2025-11-14"
         dateModified="2025-11-14"
-        keywords="tiktok diamonds, live gifts, creator earnings, diamond conversion, payout rates"
+        keywords={["tiktok diamonds", "live gifts", "creator earnings", "diamond conversion", "payout rates"]}
       />
 
       <div className="min-h-screen bg-gradient-to-br from-neutral-50 via-white to-purple-50 py-8">
@@ -254,7 +254,7 @@ export default function CompleteTikTokDiamondGuidePage() {
 
             {/* FAQ Section */}
             <FAQSection
-              title="Diamond Guide FAQ"
+              pageName="complete-tiktok-diamond-guide"
               faqs={[
                 {
                   question: "What are diamonds on TikTok?",

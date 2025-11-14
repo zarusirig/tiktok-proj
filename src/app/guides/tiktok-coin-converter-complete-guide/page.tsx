@@ -54,7 +54,7 @@ export default function TikTokCoinConverterCompleteGuidePage() {
         url="https://calculatecreator.com/guides/tiktok-coin-converter-complete-guide"
         datePublished="2025-11-14"
         dateModified="2025-11-14"
-        keywords="tiktok coin calculator, coin converter, virtual currency, gift values"
+        keywords={["tiktok coin calculator", "coin converter", "virtual currency", "gift values"]}
       />
 
       <div className="min-h-screen bg-gradient-to-br from-neutral-50 via-white to-yellow-50 py-8">
@@ -453,7 +453,7 @@ export default function TikTokCoinConverterCompleteGuidePage() {
 
             {/* FAQ Section */}
             <FAQSection
-              title="Coin Converter FAQ"
+              pageName="tiktok-coin-converter-complete-guide"
               faqs={[
                 {
                   question: "How much do TikTok coins cost?",

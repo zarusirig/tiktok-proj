@@ -53,7 +53,7 @@ export default function TikTokRPMCalculatorGuidePage() {
         url="https://calculatecreator.com/guides/tiktok-rpm-calculator-guide"
         datePublished="2025-11-14"
         dateModified="2025-11-14"
-        keywords="tiktok rpm calculator, revenue per mille, tiktok monetization, creator earnings"
+        keywords={["tiktok rpm calculator", "revenue per mille", "tiktok monetization", "creator earnings"]}
       />
 
       <div className="min-h-screen bg-gradient-to-br from-neutral-50 via-white to-green-50 py-8">
@@ -446,7 +446,7 @@ export default function TikTokRPMCalculatorGuidePage() {
 
             {/* FAQ Section */}
             <FAQSection
-              title="RPM Calculator FAQ"
+              pageName="tiktok-rpm-calculator-guide"
               faqs={[
                 {
                   question: "What is RPM on TikTok?",

@@ -52,7 +52,7 @@ export default function TikTokAdBudgetCalculatorGuidePage() {
         url="https://calculatecreator.com/guides/tiktok-ad-budget-calculator-guide"
         datePublished="2025-11-14"
         dateModified="2025-11-14"
-        keywords="tiktok ad budget calculator, advertising costs, campaign budget, CPM calculator"
+        keywords={["tiktok ad budget calculator", "advertising costs", "campaign budget", "CPM calculator"]}
       />
 
       <div className="min-h-screen bg-gradient-to-br from-neutral-50 via-white to-blue-50 py-8">
@@ -471,7 +471,7 @@ export default function TikTokAdBudgetCalculatorGuidePage() {
 
             {/* FAQ Section */}
             <FAQSection
-              title="Ad Budget Calculator FAQ"
+              pageName="tiktok-ad-budget-calculator-guide"
               faqs={[
                 {
                   question: "How much do TikTok ads cost?",

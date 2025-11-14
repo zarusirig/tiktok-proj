@@ -54,7 +54,7 @@ export default function TikTokEngagementRateCalculatorGuidePage() {
         url="https://calculatecreator.com/guides/tiktok-engagement-rate-calculator-guide"
         datePublished="2025-11-14"
         dateModified="2025-11-14"
-        keywords="tiktok engagement rate, engagement calculator, tiktok metrics, engagement optimization"
+        keywords={["tiktok engagement rate", "engagement calculator", "tiktok metrics", "engagement optimization"]}
       />
 
       <div className="min-h-screen bg-gradient-to-br from-neutral-50 via-white to-blue-50 py-8">
@@ -406,7 +406,7 @@ export default function TikTokEngagementRateCalculatorGuidePage() {
 
             {/* FAQ Section */}
             <FAQSection
-              title="Engagement Rate Calculator FAQ"
+              pageName="tiktok-engagement-rate-calculator-guide"
               faqs={[
                 {
                   question: "How do you calculate TikTok engagement rate?",

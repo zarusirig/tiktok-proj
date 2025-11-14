@@ -11,6 +11,8 @@ export type CalculatorType =
   | 'live-gifts'
   | 'coins'
   | 'rpm'
+  | 'diamond-converter'
+  | 'tiktok-ad-cost'
   | 'cpm-cpv'
   | 'affiliate-commission'
   | 'conversion-rate'
@@ -219,6 +221,43 @@ export interface RPMInput {
 export interface RPMResult extends CalculatorResult {
   rpm: number;
   benchmark: 'above' | 'average' | 'below';
+}
+
+// Diamond Converter Input
+export interface DiamondConverterInput {
+  diamonds: number;
+  currency: string;
+}
+
+// Diamond Converter Result
+export interface DiamondConverterResult extends CalculatorResult {
+  usdValue: number;
+  convertedValue: number;
+  currency: string;
+  currencySymbol: string;
+  equivalentCoins: number;
+}
+
+// TikTok Ad Cost Input
+export interface TikTokAdCostInput {
+  budget: number;
+  impressions: number;
+  views: number;
+  clicks: number;
+  conversions: number;
+  conversionValue: number;
+}
+
+// TikTok Ad Cost Result
+export interface TikTokAdCostResult extends CalculatorResult {
+  cpm: number;
+  cpv: number;
+  cpc: number;
+  cpa: number;
+  roas: number;
+  profit: number;
+  interpretation: string;
+  recommendation: string;
 }
 
 // Shop Commission Input
