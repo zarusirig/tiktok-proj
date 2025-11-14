@@ -107,7 +107,7 @@ export default function TikTokLiveShoppingPage() {
           </div>
         </Card>
 
-        <FAQSection title="LIVE Shopping FAQs" faqs={faqs} />
+        <FAQSection pageName="TikTok LIVE Shopping" faqs={faqs} />
 
         <Card>
           <h3 className="text-heading-md font-semibold text-neutral-900 mb-4">Related Resources</h3>

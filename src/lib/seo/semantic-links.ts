@@ -22,7 +22,7 @@ export interface SemanticLinkGroup {
  * Semantic relationship graph for all calculators
  * Maps: calculator slug → related calculators organized by relationship type
  */
-export const SEMANTIC_RELATIONSHIPS: Record<string, SemanticLinkGroup[]> = {
+export const SEMANTIC_RELATIONSHIPS: Record<string, Record<string, SemanticLink[]>> = {
   // ========================================
   // EARNINGS CALCULATORS
   // ========================================

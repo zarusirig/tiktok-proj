@@ -307,7 +307,7 @@ export default function TikTokCreatorMarketplacePage() {
         </Card>
 
         {/* FAQ */}
-        <FAQSection title="Creator Marketplace FAQs" faqs={faqs} />
+        <FAQSection pageName="TikTok Creator Marketplace" faqs={faqs} />
 
         {/* Related Resources */}
         <Card>

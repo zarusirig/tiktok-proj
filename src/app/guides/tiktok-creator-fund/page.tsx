@@ -373,6 +373,8 @@ export default function CreatorFundGuidePage() {
           <Link href="/guides/how-to-make-money-on-tiktok" className="inline-flex items-center text-primary-600 hover:text-primary-700 font-medium">
             ← Back to Complete TikTok Monetization Guide
           </Link>
+        </div>
+
         {/* E-E-A-T Section */}
         <div className="mt-12">
           <PageEEAT pageSlug="tiktok-creator-fund-guide" variant="full" />

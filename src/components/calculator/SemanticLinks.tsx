@@ -19,10 +19,7 @@ export function SemanticLinks({ currentCalculator, className = '' }: SemanticLin
   }
 
   const handleLinkClick = (targetSlug: string, relationship: string) => {
-    trackNavigation('semantic_link', currentCalculator, targetSlug, {
-      relationship,
-      position: 'calculator_page',
-    });
+    trackNavigation('related_content', currentCalculator, `/calculators/${targetSlug}`);
   };
 
   const getRelationshipColor = (relationship: string) => {
@@ -145,10 +142,7 @@ export function SemanticLinksCompact({
   const allLinks = linkGroups.flatMap((group) => group.links).slice(0, maxLinks);
 
   const handleLinkClick = (targetSlug: string, relationship: string) => {
-    trackNavigation('semantic_link_compact', currentCalculator, targetSlug, {
-      relationship,
-      position: 'compact_widget',
-    });
+    trackNavigation('related_content', currentCalculator, `/calculators/${targetSlug}`);
   };
 
   return (
@@ -213,10 +207,7 @@ export function SemanticLinkPrompt({
   if (!targetLink) return null;
 
   const handleClick = () => {
-    trackNavigation('semantic_link_prompt', currentCalculator, targetLink.slug, {
-      relationship,
-      position: 'inline_prompt',
-    });
+    trackNavigation('related_content', currentCalculator, `/calculators/${targetLink.slug}`);
   };
 
   return (

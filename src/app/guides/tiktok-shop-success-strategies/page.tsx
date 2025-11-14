@@ -615,7 +615,7 @@ export default function TikTokShopSuccessStrategiesPage() {
             </div>
             <div className="p-4 bg-white rounded-lg border-l-4 border-red-500">
               <p className="text-body-sm font-semibold text-red-900 mb-1">❌ Generic product descriptions</p>
-              <p className="text-body-sm text-neutral-700">Specific benefits > vague claims. "Reduced my morning routine from 30 to 10 minutes" beats "saves time."</p>
+              <p className="text-body-sm text-neutral-700">Specific benefits {'>'}vague claims. "Reduced my morning routine from 30 to 10 minutes" beats "saves time."</p>
             </div>
           </div>
         </Card>

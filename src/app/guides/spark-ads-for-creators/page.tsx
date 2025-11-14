@@ -266,7 +266,7 @@ export default function SparkAdsForCreatorsPage() {
         </Card>
 
         {/* FAQ */}
-        <FAQSection title="Spark Ads FAQs" faqs={faqs} />
+        <FAQSection pageName="Spark Ads for Creators" faqs={faqs} />
 
         {/* Related Resources */}
         <Card>

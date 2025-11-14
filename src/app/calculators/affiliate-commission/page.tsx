@@ -210,7 +210,7 @@ export default function AffiliateCommissionCalculatorPage() {
                     ${results.monthlyEarnings.toFixed(2)}
                   </p>
                   <p className="text-body-sm text-neutral-600 mt-2">
-                    Annual: ${results.annualEarnings.toFixed(2)}
+                    Annual: ${results.annualProjection.toFixed(2)}
                   </p>
                 </div>
 

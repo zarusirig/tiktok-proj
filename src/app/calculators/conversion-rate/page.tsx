@@ -194,25 +194,25 @@ export default function ConversionRateCalculatorPage() {
                     {results.conversionRate.toFixed(2)}%
                   </p>
                   <p className="text-body-sm text-neutral-600 mt-2">
-                    {results.conversions} conversions from {results.visitors.toLocaleString()} visitors
+                    {inputs.conversions} conversions from {inputs.visitors.toLocaleString()} visitors
                   </p>
                 </div>
 
                 {results.rating && (
                   <div className={`p-4 rounded-lg border-2 ${
-                    results.rating === 'Excellent' ? 'bg-success-50 border-success-300' :
-                    results.rating === 'Good' ? 'bg-primary-50 border-primary-300' :
-                    results.rating === 'Average' ? 'bg-neutral-50 border-neutral-300' :
+                    results.rating === 'excellent' ? 'bg-success-50 border-success-300' :
+                    results.rating === 'good' ? 'bg-primary-50 border-primary-300' :
+                    results.rating === 'average' ? 'bg-neutral-50 border-neutral-300' :
                     'bg-warning-50 border-warning-300'
                   }`}>
                     <p className="text-label-md font-semibold mb-1">
-                      Performance: {results.rating}
+                      Performance: {results.rating.charAt(0).toUpperCase() + results.rating.slice(1)}
                     </p>
                     <p className="text-body-sm text-neutral-600">
-                      {results.rating === 'Excellent' && 'Outstanding conversion rate! Your landing page and offer are highly optimized.'}
-                      {results.rating === 'Good' && 'Above-average conversion rate. Small optimizations could push you higher.'}
-                      {results.rating === 'Average' && 'Typical conversion rate for TikTok traffic. Room for improvement.'}
-                      {results.rating === 'Needs Improvement' && 'Below average. Focus on landing page optimization and offer clarity.'}
+                      {results.rating === 'excellent' && 'Outstanding conversion rate! Your landing page and offer are highly optimized.'}
+                      {results.rating === 'good' && 'Above-average conversion rate. Small optimizations could push you higher.'}
+                      {results.rating === 'average' && 'Typical conversion rate for TikTok traffic. Room for improvement.'}
+                      {results.rating === 'poor' && 'Below average. Focus on landing page optimization and offer clarity.'}
                     </p>
                   </div>
                 )}
@@ -221,7 +221,7 @@ export default function ConversionRateCalculatorPage() {
                   <div className="flex items-center justify-between mb-2">
                     <span className="text-label-md text-neutral-600">Visitors Needed for 100 Conversions</span>
                     <span className="text-heading-md font-semibold text-neutral-900">
-                      {results.visitorsNeededFor100.toLocaleString()}
+                      {Math.round(100 / results.conversionRate).toLocaleString()}
                     </span>
                   </div>
                   <p className="text-body-xs text-neutral-500">Based on your current conversion rate</p>

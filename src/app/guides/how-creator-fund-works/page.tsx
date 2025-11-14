@@ -361,7 +361,7 @@ export default function HowCreatorFundWorksPage() {
         </Card>
 
         {/* FAQ */}
-        <FAQSection title="How Creator Fund Works: FAQs" faqs={faqs} />
+        <FAQSection pageName="How Creator Fund Works" faqs={faqs} />
 
         {/* Related Resources */}
         <Card>

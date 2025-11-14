@@ -193,19 +193,19 @@ export default function CampaignROICalculatorPage() {
 
                 {results.rating && (
                   <div className={`p-4 rounded-lg border-2 ${
-                    results.rating === 'Excellent' ? 'bg-success-50 border-success-300' :
-                    results.rating === 'Good' ? 'bg-primary-50 border-primary-300' :
-                    results.rating === 'Break-Even' ? 'bg-neutral-50 border-neutral-300' :
+                    results.rating === 'excellent' ? 'bg-success-50 border-success-300' :
+                    results.rating === 'good' ? 'bg-primary-50 border-primary-300' :
+                    results.rating === 'break-even' ? 'bg-neutral-50 border-neutral-300' :
                     'bg-error-50 border-error-300'
                   }`}>
                     <p className="text-label-md font-semibold mb-1">
-                      Performance: {results.rating}
+                      Performance: {results.rating === 'break-even' ? 'Break-Even' : results.rating.charAt(0).toUpperCase() + results.rating.slice(1)}
                     </p>
                     <p className="text-body-sm text-neutral-600">
-                      {results.rating === 'Excellent' && 'Outstanding ROI! Your campaign is highly profitable—scale up!'}
-                      {results.rating === 'Good' && 'Solid ROI. Campaign is profitable and worth continuing.'}
-                      {results.rating === 'Break-Even' && 'Breaking even. Optimize before scaling further.'}
-                      {results.rating === 'Unprofitable' && 'Losing money. Pause and optimize targeting, creative, or landing page.'}
+                      {results.rating === 'excellent' && 'Outstanding ROI! Your campaign is highly profitable—scale up!'}
+                      {results.rating === 'good' && 'Solid ROI. Campaign is profitable and worth continuing.'}
+                      {results.rating === 'break-even' && 'Breaking even. Optimize before scaling further.'}
+                      {results.rating === 'loss' && 'Losing money. Pause and optimize targeting, creative, or landing page.'}
                     </p>
                   </div>
                 )}

@@ -20,7 +20,7 @@ const faqs = [
     answer: 'The minimum payout threshold is $10 in the United States. You must accumulate at least $10 in earnings before TikTok processes a payment. Some regions have different minimums.',
   },
   {
-    question: 'Why hasn't my TikTok payment arrived yet?',
+    question: 'Why hasn\'t my TikTok payment arrived yet?',
     answer: 'Common reasons include: minimum balance not met, payment method verification pending, missing tax documentation, account under review, or regional payment processing delays. Check your TikTok Creator Tools for specific issues.',
   },
   {

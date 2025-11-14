@@ -265,7 +265,7 @@ export default function CreatorFundPaymentSchedulePage() {
         </Card>
 
         {/* FAQ */}
-        <FAQSection title="Payment Schedule FAQs" faqs={faqs} />
+        <FAQSection pageName="Creator Fund Payment Schedule" faqs={faqs} />
 
         {/* Related Resources */}
         <Card>
