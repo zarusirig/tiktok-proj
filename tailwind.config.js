@@ -49,6 +49,10 @@ module.exports = {
           800: '#650F20',
           900: '#320710',
         },
+        // TikTok Brand Colors
+        'tiktok-pink': '#FE2C55',
+        'tiktok-red': '#CB1E3F',
+        'tiktok-blue': '#0066FF',
         // Neutral Colors
         neutral: {
           50: '#FAFAFA',

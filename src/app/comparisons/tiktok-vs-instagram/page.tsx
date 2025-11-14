@@ -41,7 +41,7 @@ export default function TikTokVsInstagramPage() {
       </nav>
 
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-tiktok-pink via-tiktok-red to-tiktok-blue py-12">
+      <section className="bg-gradient-to-br from-purple-500 via-pink-500 to-red-500 py-12">
       <div className="container-custom max-w-4xl">
           <h1 className="text-display-lg font-bold text-white mb-4">
             TikTok vs Instagram Creator Income: Complete Comparison (2025)

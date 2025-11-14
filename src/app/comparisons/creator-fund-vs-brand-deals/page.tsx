@@ -49,7 +49,7 @@ export default function CreatorFundVsBrandDealsPage() {
       </nav>
 
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-tiktok-pink via-tiktok-red to-tiktok-blue py-12">
+      <section className="bg-gradient-to-br from-pink-500 via-red-500 to-blue-600 py-12">
         <div className="container-custom max-w-4xl">
           <h1 className="text-display-lg font-bold text-white mb-4">
             Creator Fund vs Brand Deals: Which Pays More?
