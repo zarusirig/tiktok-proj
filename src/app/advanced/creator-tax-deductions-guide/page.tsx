@@ -384,7 +384,7 @@ export default function CreatorTaxDeductionsGuidePage() {
         </Card>
 
         {/* FAQ Section */}
-        <FAQSection faqs={faqs} />
+        <FAQSection faqs={faqs} pageName="Creator Tax Deductions Guide" />
 
         {/* Next Steps */}
         <Card>

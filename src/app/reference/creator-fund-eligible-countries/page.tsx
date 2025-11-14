@@ -448,7 +448,7 @@ export default function CreatorFundEligibleCountriesPage() {
         </Card>
 
         {/* FAQ Section */}
-        <FAQSection faqs={faqs} />
+        <FAQSection faqs={faqs} pageName="Creator Fund Eligible Countries" />
 
         {/* Next Steps */}
         <Card>

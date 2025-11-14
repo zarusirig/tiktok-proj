@@ -468,7 +468,7 @@ Date: _______________________`}
         </Card>
 
         {/* FAQ Section */}
-        <FAQSection faqs={faqs} />
+        <FAQSection faqs={faqs} pageName="Brand Deal Contract Template" />
 
         {/* Next Steps */}
         <Card>

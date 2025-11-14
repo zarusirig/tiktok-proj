@@ -385,7 +385,7 @@ export default function TikTokCommentsToLikesRatioPage() {
         </Card>
 
         {/* FAQ Section */}
-        <FAQSection faqs={faqs} />
+        <FAQSection faqs={faqs} pageName="TikTok Comments to Likes Ratio" />
 
         {/* Next Steps */}
         <Card>

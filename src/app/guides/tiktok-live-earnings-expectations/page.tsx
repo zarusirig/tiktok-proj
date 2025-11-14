@@ -341,7 +341,7 @@ export default function TikTokLiveEarningsExpectationsPage() {
         </Card>
 
         {/* FAQ Section */}
-        <FAQSection faqs={faqs} />
+        <FAQSection faqs={faqs} pageName="TikTok LIVE Earnings Expectations" />
 
         {/* Next Steps */}
         <Card>

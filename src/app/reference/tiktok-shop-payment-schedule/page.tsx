@@ -290,7 +290,7 @@ export default function TikTokShopPaymentSchedulePage() {
         </Card>
 
         {/* FAQ Section */}
-        <FAQSection faqs={faqs} />
+        <FAQSection faqs={faqs} pageName="TikTok Shop Payment Schedule" />
 
         {/* Next Steps */}
         <Card>
