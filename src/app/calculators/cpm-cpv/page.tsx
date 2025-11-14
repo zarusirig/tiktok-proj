@@ -191,19 +191,19 @@ export default function CPMCPVCalculatorPage() {
 
                 {results.benchmark && (
                   <div className={`p-4 rounded-lg border-2 ${
-                    results.benchmark === 'Excellent' ? 'bg-success-50 border-success-300' :
-                    results.benchmark === 'Good' ? 'bg-primary-50 border-primary-300' :
-                    results.benchmark === 'Average' ? 'bg-neutral-50 border-neutral-300' :
+                    results.benchmark === 'excellent' ? 'bg-success-50 border-success-300' :
+                    results.benchmark === 'good' ? 'bg-primary-50 border-primary-300' :
+                    results.benchmark === 'average' ? 'bg-neutral-50 border-neutral-300' :
                     'bg-warning-50 border-warning-300'
                   }`}>
                     <p className="text-label-md font-semibold mb-1">
-                      Performance: {results.benchmark}
+                      Performance: {results.benchmark.charAt(0).toUpperCase() + results.benchmark.slice(1)}
                     </p>
                     <p className="text-body-sm text-neutral-600">
-                      {results.benchmark === 'Excellent' && 'Your CPM is excellent—great targeting and ad efficiency!'}
-                      {results.benchmark === 'Good' && 'Your CPM is above average—solid campaign performance.'}
-                      {results.benchmark === 'Average' && 'Your CPM is within typical range for TikTok ads.'}
-                      {results.benchmark === 'High' && 'Your CPM is higher than average—consider optimizing targeting or creative.'}
+                      {results.benchmark === 'excellent' && 'Your CPM is excellent—great targeting and ad efficiency!'}
+                      {results.benchmark === 'good' && 'Your CPM is above average—solid campaign performance.'}
+                      {results.benchmark === 'average' && 'Your CPM is within typical range for TikTok ads.'}
+                      {results.benchmark === 'expensive' && 'Your CPM is higher than average—consider optimizing targeting or creative.'}
                     </p>
                   </div>
                 )}

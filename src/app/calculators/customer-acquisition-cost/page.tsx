@@ -201,19 +201,19 @@ export default function CustomerAcquisitionCostCalculatorPage() {
 
                 {results.benchmark && (
                   <div className={`p-4 rounded-lg border-2 ${
-                    results.benchmark === 'Excellent' ? 'bg-success-50 border-success-300' :
-                    results.benchmark === 'Good' ? 'bg-primary-50 border-primary-300' :
-                    results.benchmark === 'Average' ? 'bg-neutral-50 border-neutral-300' :
+                    results.benchmark === 'excellent' ? 'bg-success-50 border-success-300' :
+                    results.benchmark === 'good' ? 'bg-primary-50 border-primary-300' :
+                    results.benchmark === 'acceptable' ? 'bg-neutral-50 border-neutral-300' :
                     'bg-warning-50 border-warning-300'
                   }`}>
                     <p className="text-label-md font-semibold mb-1">
-                      Performance: {results.benchmark}
+                      Performance: {results.benchmark.charAt(0).toUpperCase() + results.benchmark.slice(1)}
                     </p>
                     <p className="text-body-sm text-neutral-600">
-                      {results.benchmark === 'Excellent' && 'Outstanding CAC! You\'re acquiring customers very efficiently.'}
-                      {results.benchmark === 'Good' && 'Solid CAC for most businesses. Monitor and maintain this level.'}
-                      {results.benchmark === 'Average' && 'Typical CAC. Look for optimization opportunities to reduce costs.'}
-                      {results.benchmark === 'High' && 'CAC is high—focus on improving conversion rate and targeting.'}
+                      {results.benchmark === 'excellent' && 'Outstanding CAC! You\'re acquiring customers very efficiently.'}
+                      {results.benchmark === 'good' && 'Solid CAC for most businesses. Monitor and maintain this level.'}
+                      {results.benchmark === 'acceptable' && 'Typical CAC. Look for optimization opportunities to reduce costs.'}
+                      {results.benchmark === 'high' && 'CAC is high—focus on improving conversion rate and targeting.'}
                     </p>
                   </div>
                 )}
