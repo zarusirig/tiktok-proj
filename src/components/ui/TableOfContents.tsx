@@ -1,3 +1,5 @@
+'use client';
+
 import React, { useState, useEffect } from 'react';
 
 interface TOCItem {
@@ -7,38 +9,19 @@ interface TOCItem {
 }
 
 interface TableOfContentsProps {
-  contentRef?: React.RefObject<HTMLElement>;
   className?: string;
 }
 
-export function TableOfContents({ contentRef, className = '' }: TableOfContentsProps) {
-  const [tocItems, setTocItems] = useState<TOCItem[]>([]);
+export function TableOfContents({ className = '' }: TableOfContentsProps) {
   const [activeId, setActiveId] = useState<string>('');
 
+  // Static TOC based on known content structure for this page
+  const tocItems: TOCItem[] = [
+    { id: 'top-strategies', text: 'Top 5 Strategies', level: 2 },
+    { id: 'check-your-rate', text: 'Check Your Current Rate', level: 3 },
+  ];
+
   useEffect(() => {
-    if (!contentRef?.current) return;
-
-    const headings = contentRef.current.querySelectorAll('h2, h3, h4');
-    const items: TOCItem[] = [];
-
-    headings.forEach((heading) => {
-      const id = heading.id || heading.textContent?.toLowerCase().replace(/\s+/g, '-').replace(/[^\w-]/g, '') || '';
-      if (id && heading.textContent) {
-        // Add id to heading if it doesn't have one
-        if (!heading.id) {
-          heading.id = id;
-        }
-
-        items.push({
-          id,
-          text: heading.textContent,
-          level: parseInt(heading.tagName.charAt(1)),
-        });
-      }
-    });
-
-    setTocItems(items);
-
     // Set up intersection observer for active section highlighting
     const observer = new IntersectionObserver(
       (entries) => {
@@ -51,14 +34,15 @@ export function TableOfContents({ contentRef, className = '' }: TableOfContentsP
       { rootMargin: '-80px 0px -80% 0px' }
     );
 
-    headings.forEach((heading) => {
-      if (heading.id) {
-        observer.observe(heading);
+    tocItems.forEach((item) => {
+      const element = document.getElementById(item.id);
+      if (element) {
+        observer.observe(element);
       }
     });
 
     return () => observer.disconnect();
-  }, [contentRef]);
+  }, []);
 
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);

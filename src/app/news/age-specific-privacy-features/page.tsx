@@ -202,12 +202,12 @@ export default function AgeSpecificPrivacyFeaturesPage() {
           <ul className="space-y-3">
             <li>
               <a
-                href="https://us.myfirst.tech/blogs/parenting/tiktok-new-safety-features"
+                href="/news/parent-safety-features-update"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-primary-600 hover:text-primary-700 hover:underline text-body-md"
               >
-                MyFirst: TikTok New Safety Features by Age →
+                TikTok Parent Safety Features Update →
               </a>
             </li>
           </ul>

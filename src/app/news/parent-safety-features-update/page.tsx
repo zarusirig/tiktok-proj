@@ -201,12 +201,12 @@ export default function ParentSafetyFeaturesUpdatePage() {
           <ul className="space-y-3">
             <li>
               <a
-                href="https://abcnews.go.com/GMA/Living/video/tiktok-unveils-new-safety-features-112643584"
+                href="/news/age-specific-privacy-features"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-primary-600 hover:text-primary-700 hover:underline text-body-md"
               >
-                ABC News: TikTok Unveils New Safety Features →
+                TikTok Age-Specific Privacy Features →
               </a>
             </li>
           </ul>

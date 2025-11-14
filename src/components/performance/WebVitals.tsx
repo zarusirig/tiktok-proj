@@ -4,34 +4,49 @@ import { useEffect } from 'react';
 
 export function WebVitals() {
   useEffect(() => {
-    // Measure Core Web Vitals
-    if (typeof window !== 'undefined' && 'web-vitals' in window) {
-      import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
-        getCLS(console.log);
-        getFID(console.log);
-        getFCP(console.log);
-        getLCP(console.log);
-        getTTFB(console.log);
-      });
-    }
+    // Basic performance monitoring without web-vitals for now
+    if (typeof window !== 'undefined' && 'PerformanceObserver' in window) {
+      try {
+        // Monitor Largest Contentful Paint
+        const lcpObserver = new PerformanceObserver((list) => {
+          const entries = list.getEntries();
+          const lastEntry = entries[entries.length - 1];
+          console.log('LCP:', lastEntry.startTime, 'ms');
+        });
+        lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
 
-    // Measure custom metrics
-    const observer = new PerformanceObserver((list) => {
-      for (const entry of list.getEntries()) {
-        // Log performance entries for monitoring
-        if (entry.entryType === 'largest-contentful-paint') {
-          console.log('LCP:', entry.startTime, 'ms');
-        } else if (entry.entryType === 'first-input') {
-          console.log('FID:', entry.processingStart - entry.startTime, 'ms');
-        } else if (entry.entryType === 'layout-shift') {
-          console.log('CLS contribution:', entry.value);
-        }
+        // Monitor First Input Delay
+        const fidObserver = new PerformanceObserver((list) => {
+          for (const entry of list.getEntries()) {
+            const fidEntry = entry as any; // Cast to any to access processingStart
+            if (fidEntry.processingStart) {
+              console.log('FID:', fidEntry.processingStart - entry.startTime, 'ms');
+            }
+          }
+        });
+        fidObserver.observe({ entryTypes: ['first-input'] });
+
+        // Monitor Cumulative Layout Shift
+        const clsObserver = new PerformanceObserver((list) => {
+          let clsValue = 0;
+          for (const entry of list.getEntries()) {
+            if (!(entry as any).hadRecentInput) {
+              clsValue += (entry as any).value;
+            }
+          }
+          console.log('CLS:', clsValue);
+        });
+        clsObserver.observe({ entryTypes: ['layout-shift'] });
+
+        return () => {
+          lcpObserver.disconnect();
+          fidObserver.disconnect();
+          clsObserver.disconnect();
+        };
+      } catch (error) {
+        console.warn('Performance monitoring not supported:', error);
       }
-    });
-
-    observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'] });
-
-    return () => observer.disconnect();
+    }
   }, []);
 
   return null; // This component doesn't render anything

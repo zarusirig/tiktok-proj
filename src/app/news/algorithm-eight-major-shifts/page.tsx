@@ -220,12 +220,12 @@ export default function AlgorithmEightMajorShiftsPage() {
           <ul className="space-y-3">
             <li>
               <a
-                href="https://napolify.com/recent-tiktok-fyp-algorithm-changes/"
+                href="/guides/tiktok-algorithm-optimization"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-primary-600 hover:text-primary-700 hover:underline text-body-md"
               >
-                Napolify: Recent TikTok FYP Algorithm Changes →
+                TikTok Algorithm Optimization Guide →
               </a>
             </li>
           </ul>

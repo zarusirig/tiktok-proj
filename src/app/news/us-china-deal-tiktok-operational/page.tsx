@@ -224,7 +224,7 @@ export default function USChinaDealPage() {
           </p>
           <div className="grid gap-3">
             <Link
-              href="/calculators/money-calculator"
+              href="/calculators/tiktok-money"
               className="flex items-center justify-between p-4 bg-white rounded-lg border-2 border-transparent hover:border-primary-500 transition-colors"
             >
               <span className="font-semibold text-neutral-900">TikTok Money Calculator</span>
@@ -255,12 +255,12 @@ export default function USChinaDealPage() {
           <ul className="space-y-3">
             <li>
               <a
-                href="https://www.cnn.com/2025/09/15/business/tiktok-deal-reached-china/index.html"
+                href="/news/tiktok-ban-delayed-december-2025"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-primary-600 hover:text-primary-700 hover:underline text-body-md"
               >
-                CNN: TikTok Deal Reached Between US and China →
+                TikTok US Ban Delayed Update →
               </a>
             </li>
             <li>

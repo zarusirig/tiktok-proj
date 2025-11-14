@@ -181,7 +181,7 @@ export default function SponsorshipDisclosurePage() {
         <Card>
           <h3 className="text-heading-md font-semibold text-neutral-900 mb-4">Related Resources</h3>
           <div className="grid md:grid-cols-2 gap-4">
-            <Link href="/guides/how-to-get-brand-deals-on-tiktok" className="p-4 bg-neutral-50 rounded-lg hover:bg-neutral-100">
+            <Link href="/guides/how-to-get-brand-deals" className="p-4 bg-neutral-50 rounded-lg hover:bg-neutral-100">
               <h4 className="font-semibold text-neutral-900 mb-1">🤝 How to Get Brand Deals</h4>
               <p className="text-body-sm text-neutral-700">Complete guide to TikTok sponsorships</p>
             </Link>

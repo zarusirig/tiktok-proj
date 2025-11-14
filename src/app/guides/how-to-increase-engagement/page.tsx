@@ -1,8 +1,5 @@
-'use client';
-
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { useRef } from 'react';
 import { Card } from '@/components/ui/Card';
 import { FAQSection } from '@/components/calculator/FAQSection';
 import { ArticleSchema } from '@/components/seo/CalculatorSchema';
@@ -17,7 +14,6 @@ export const metadata: Metadata = {
 };
 
 export default function IncreaseEngagementPage() {
-  const contentRef = useRef<HTMLDivElement>(null);
   const strategies = [
     { title: 'Ask Questions in Captions', effect: 'Comments +40%' },
     { title: 'Use Trending Sounds', effect: 'Views +30%' },
@@ -79,14 +75,12 @@ export default function IncreaseEngagementPage() {
       {/* Trust Badges */}
       <TrustBadges />
 
-      <div className="container-custom max-w-4xl py-12 space-y-8">
+        <div className="container-custom max-w-4xl py-12 space-y-8">
           {/* Author Byline */}
           <PageAuthorByline pageSlug="how-to-increase-engagement" />
 
           {/* Table of Contents */}
-          <TableOfContents contentRef={contentRef} />
-
-          <div ref={contentRef}>
+          <TableOfContents />
             <Card id="top-strategies">
           <h2 className="text-heading-lg font-semibold text-neutral-900 mb-6">Top 5 Strategies</h2>
           <p className="text-body-md text-neutral-700 mb-6">
@@ -115,7 +109,6 @@ export default function IncreaseEngagementPage() {
 
             {/* E-E-A-T Section: Author Bio, Review Info, Citations, Disclaimers */}
             <PageEEAT pageSlug="how-to-increase-engagement" />
-          </div>
         </div>
     </div>
     </>

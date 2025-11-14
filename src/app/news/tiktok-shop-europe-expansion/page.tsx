@@ -157,12 +157,12 @@ export default function TikTokShopEuropeExpansionPage() {
           <ul className="space-y-3">
             <li>
               <a
-                href="https://www.reuters.com/technology/tiktok-shop-steps-up-europe-expansion-with-us-future-unclear-2025-03-27/"
+                href="/guides/tiktok-shop-success-strategies"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-primary-600 hover:text-primary-700 hover:underline text-body-md"
               >
-                Reuters: TikTok Shop Steps Up Europe Expansion →
+                TikTok Shop Success Strategies Guide →
               </a>
             </li>
           </ul>

@@ -228,12 +228,12 @@ export default function RetentionMetricsPriorityPage() {
           <ul className="space-y-3">
             <li>
               <a
-                href="https://napolify.com/recent-tiktok-fyp-algorithm-changes/"
+                href="/guides/tiktok-algorithm-optimization"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-primary-600 hover:text-primary-700 hover:underline text-body-md"
               >
-                Napolify: TikTok Algorithm Retention Focus →
+                TikTok Algorithm Optimization Guide →
               </a>
             </li>
           </ul>

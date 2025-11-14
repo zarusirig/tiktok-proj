@@ -203,14 +203,14 @@ export default function TikTokBanDelayedPage() {
           </p>
           <div className="grid gap-3">
             <Link
-              href="/calculators/money-calculator"
+              href="/calculators/tiktok-money"
               className="flex items-center justify-between p-4 bg-white rounded-lg border-2 border-transparent hover:border-primary-500 transition-colors"
             >
               <span className="font-semibold text-neutral-900">TikTok Money Calculator</span>
               <span className="text-primary-600">→</span>
             </Link>
             <Link
-              href="/calculators/creator-rewards"
+              href="/calculators/tiktok-creator-fund"
               className="flex items-center justify-between p-4 bg-white rounded-lg border-2 border-transparent hover:border-primary-500 transition-colors"
             >
               <span className="font-semibold text-neutral-900">Creator Rewards Calculator</span>
@@ -234,12 +234,12 @@ export default function TikTokBanDelayedPage() {
           <ul className="space-y-3">
             <li>
               <a
-                href="https://www.whitehouse.gov/briefing-room/presidential-actions/2025/09/24/saving-tiktok-while-protecting-national-security/"
+                href="/news/us-china-deal-tiktok-operational"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-primary-600 hover:text-primary-700 hover:underline text-body-md"
               >
-                White House Presidential Actions: Saving TikTok While Protecting National Security →
+                US-China TikTok Deal Update →
               </a>
             </li>
             <li>

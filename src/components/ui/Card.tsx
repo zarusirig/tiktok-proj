@@ -1,7 +1,7 @@
 import React from 'react';
 import { cn } from '@/lib/utils/cn';
 
-interface CardProps {
+interface CardProps extends React.HTMLAttributes<HTMLDivElement> {
   children: React.ReactNode;
   className?: string;
   hover?: boolean;
@@ -13,6 +13,7 @@ export function Card({
   className,
   hover = false,
   padding = 'lg',
+  ...props
 }: CardProps) {
   const paddingStyles = {
     none: '',
@@ -23,6 +24,7 @@ export function Card({
 
   return (
     <div
+      {...props}
       className={cn(
         'card',
         hover && 'card-hover',

@@ -312,14 +312,14 @@ export default function NewsPage() {
             </p>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-3">
               <Link
-                href="/calculators/money-calculator"
+                href="/calculators/tiktok-money"
                 className="flex items-center justify-between p-4 bg-white rounded-lg border-2 border-transparent hover:border-primary-500 transition-colors"
               >
                 <span className="font-semibold text-neutral-900">TikTok Money Calculator</span>
                 <span className="text-primary-600">→</span>
               </Link>
               <Link
-                href="/calculators/creator-rewards"
+                href="/calculators/tiktok-creator-fund"
                 className="flex items-center justify-between p-4 bg-white rounded-lg border-2 border-transparent hover:border-primary-500 transition-colors"
               >
                 <span className="font-semibold text-neutral-900">Creator Rewards Calculator</span>
