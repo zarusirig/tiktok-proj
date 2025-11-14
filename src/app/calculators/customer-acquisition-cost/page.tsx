@@ -222,7 +222,7 @@ export default function CustomerAcquisitionCostCalculatorPage() {
                   <div className="flex items-center justify-between mb-2">
                     <span className="text-label-md text-neutral-600">Recommended Minimum LTV</span>
                     <span className="text-heading-md font-semibold text-neutral-900">
-                      ${results.recommendedLTV.toFixed(2)}
+                      ${(results.cac * 3).toFixed(2)}
                     </span>
                   </div>
                   <p className="text-body-xs text-neutral-500">Your customer lifetime value should be at least 3× your CAC</p>
@@ -232,7 +232,7 @@ export default function CustomerAcquisitionCostCalculatorPage() {
                   <div className="flex items-center justify-between mb-2">
                     <span className="text-label-md text-neutral-600">Customers per $1,000 Spent</span>
                     <span className="text-heading-md font-semibold text-neutral-900">
-                      {results.customersPerDollar.toFixed(1)}
+                      {(1000 / results.cac).toFixed(1)}
                     </span>
                   </div>
                   <p className="text-body-xs text-neutral-500">Acquisition efficiency metric</p>

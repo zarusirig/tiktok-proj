@@ -221,7 +221,7 @@ export default function ConversionRateCalculatorPage() {
                   <div className="flex items-center justify-between mb-2">
                     <span className="text-label-md text-neutral-600">Visitors Needed for 100 Conversions</span>
                     <span className="text-heading-md font-semibold text-neutral-900">
-                      {results.visitorsNeededFor100.toLocaleString()}
+                      {Math.round(100 / results.conversionRate).toLocaleString()}
                     </span>
                   </div>
                   <p className="text-body-xs text-neutral-500">Based on your current conversion rate</p>

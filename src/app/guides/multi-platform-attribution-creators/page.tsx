@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 const faqs = [
   {
     question: 'What is multi-platform attribution and why does it matter?',
-    answer: 'Multi-platform attribution tracks which platforms drive specific results (traffic, conversions, revenue). It matters because it shows where to invest time and helps prove ROI to brands. Without it, you're guessing which platforms actually drive business results.',
+    answer: 'Multi-platform attribution tracks which platforms drive specific results (traffic, conversions, revenue). It matters because it shows where to invest time and helps prove ROI to brands. Without it, you\'re guessing which platforms actually drive business results.',
   },
   {
     question: 'How do I track which platform drives the most revenue?',

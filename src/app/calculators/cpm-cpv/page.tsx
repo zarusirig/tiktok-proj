@@ -212,7 +212,7 @@ export default function CPMCPVCalculatorPage() {
                   <div className="flex items-center justify-between mb-2">
                     <span className="text-label-md text-neutral-600">Impressions per $1</span>
                     <span className="text-heading-md font-semibold text-neutral-900">
-                      {results.impressionsPerDollar.toFixed(0)}
+                      {(1000 / results.cpm).toFixed(0)}
                     </span>
                   </div>
                   <p className="text-body-xs text-neutral-500">How many impressions you get for every dollar spent</p>
