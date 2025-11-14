@@ -57,9 +57,6 @@ export const metadata: Metadata = {
     description:
       'Free TikTok calculators for creators: estimate earnings, engagement rates, and more.',
   },
-  alternates: {
-    canonical: 'https://calculatecreator.com',
-  },
   verification: {
     google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION || '',
   },
