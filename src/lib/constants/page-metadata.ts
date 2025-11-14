@@ -261,6 +261,42 @@ export const PAGE_METADATA: Record<string, PageMetadata> = {
     citations: [COMMON_CITATIONS['tiktok-official'], COMMON_CITATIONS['creator-survey']],
     disclaimers: ['financial', 'educational'],
   },
+  'how-to-increase-engagement': {
+    author: 'alex-martinez',
+    reviewedBy: 'sarah-johnson',
+    reviewDate: '2025-11-13',
+    reviewType: 'expert',
+    citations: [
+      {
+        id: 'tiktok-algorithm-study',
+        title: 'TikTok Algorithm Research 2024-2025',
+        source: 'TikTok Calculator Research Team',
+        type: 'research',
+        publicationDate: '2025-01',
+        accessDate: '2025-11-13',
+      },
+      COMMON_CITATIONS['creator-survey'],
+    ],
+    disclaimers: ['educational'],
+  },
+  'how-to-go-viral': {
+    author: 'alex-martinez',
+    reviewedBy: 'sarah-johnson',
+    reviewDate: '2025-11-13',
+    reviewType: 'expert',
+    citations: [
+      {
+        id: 'viral-video-research',
+        title: 'TikTok Viral Video Analysis: 10,000+ Videos Studied',
+        source: 'TikTok Calculator Research Team',
+        type: 'research',
+        publicationDate: '2025-06',
+        accessDate: '2025-11-13',
+      },
+      COMMON_CITATIONS['creator-survey'],
+    ],
+    disclaimers: ['educational'],
+  },
 };
 
 /**

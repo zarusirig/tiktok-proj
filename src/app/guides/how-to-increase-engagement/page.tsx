@@ -1,6 +1,9 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { Card } from '@/components/ui/Card';
+import { FAQSection } from '@/components/calculator/FAQSection';
+import { ArticleSchema } from '@/components/seo/CalculatorSchema';
+import { PageAuthorByline, PageEEAT } from '@/lib/eeat/page-eeat';
 
 export const metadata: Metadata = {
   title: 'How to Increase TikTok Engagement: 12 Proven Strategies (2025)',
@@ -17,26 +20,59 @@ export default function IncreaseEngagementPage() {
     { title: 'Respond to All Comments', effect: 'Loyalty +35%' },
   ];
 
+  const faqs = [
+    {
+      question: 'How long does it take to see engagement improvements?',
+      answer: 'Most creators see engagement improvements within 1-2 weeks of implementing these strategies. The TikTok algorithm responds to engagement patterns quickly, but consistent posting is key.',
+    },
+    {
+      question: 'Should I buy likes or comments to boost engagement?',
+      answer: 'No, this violates TikTok\'s terms of service and can result in account suspension. Focus on organic strategies that genuinely engage your audience.',
+    },
+    {
+      question: 'What\'s more important: likes or comments?',
+      answer: 'Comments are generally more valuable than likes for the algorithm. Comments signal deeper engagement and encourage more algorithm visibility.',
+    },
+  ];
+
   return (
-    <div className="min-h-screen bg-neutral-50">
-      <nav className="bg-white border-b border-neutral-200 py-3">
-        <div className="container-custom">
-          <div className="flex items-center space-x-2 text-body-sm text-neutral-600">
-            <Link href="/">Home</Link><span>/</span>
-            <Link href="/guides">Guides</Link><span>/</span>
-            <span className="text-neutral-900">Increase Engagement</span>
+    <>
+      {/* Article Schema for SEO */}
+      <ArticleSchema
+        headline="How to Increase TikTok Engagement: 12 Proven Strategies (2025)"
+        description="Boost likes, comments, shares, and saves on TikTok. Data-backed strategies to increase engagement rate and algorithmic performance."
+        url="https://tiktokcalculator.com/guides/how-to-increase-engagement"
+        datePublished="2024-01-15"
+        dateModified="2025-11-13"
+        keywords={['increase tiktok engagement', 'boost engagement rate', 'get more likes', 'tiktok algorithm']}
+      />
+
+      <div className="min-h-screen bg-neutral-50">
+        <nav className="bg-white border-b border-neutral-200 py-3">
+          <div className="container-custom">
+            <div className="flex items-center space-x-2 text-body-sm text-neutral-600">
+              <Link href="/">Home</Link><span>/</span>
+              <Link href="/guides">Guides</Link><span>/</span>
+              <span className="text-neutral-900">Increase Engagement</span>
+            </div>
           </div>
-        </div>
-      </nav>
+        </nav>
 
-      <section className="bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 py-12">
-        <div className="container-custom max-w-4xl">
-          <h1 className="text-display-lg font-bold text-white mb-4">How to Increase TikTok Engagement</h1>
-          <p className="text-heading-md text-white/90">12 proven strategies to boost likes, comments, and shares</p>
-        </div>
-      </section>
+        <section className="bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 py-12">
+          <div className="container-custom max-w-4xl">
+            <h1 className="text-display-lg font-bold text-white mb-4">How to Increase TikTok Engagement</h1>
+            <p className="text-heading-md text-white/90 mb-4">12 proven strategies to boost likes, comments, and shares</p>
+            <div className="flex flex-wrap gap-4 text-body-sm text-white/80">
+              <span>⏱️ 6 min read</span>
+              <span>📅 Updated: November 13, 2025</span>
+              <span>📈 Algorithm Optimization</span>
+            </div>
+          </div>
+        </section>
 
-      <div className="container-custom max-w-4xl py-12 space-y-8">
+        <div className="container-custom max-w-4xl py-12 space-y-8">
+          {/* Author Byline */}
+          <PageAuthorByline pageSlug="how-to-increase-engagement" />
         <Card>
           <h2 className="text-heading-lg font-semibold text-neutral-900 mb-6">Top 5 Strategies</h2>
           <div className="space-y-4">
@@ -55,8 +91,15 @@ export default function IncreaseEngagementPage() {
             Calculate Engagement Rate →
           </Link>
         </Card>
+
+        {/* FAQ Section */}
+        <FAQSection faqs={faqs} pageName="How to Increase TikTok Engagement" />
+
+        {/* E-E-A-T Section: Author Bio, Review Info, Citations, Disclaimers */}
+        <PageEEAT pageSlug="how-to-increase-engagement" />
       </div>
     </div>
+    </>
   );
 }
 
