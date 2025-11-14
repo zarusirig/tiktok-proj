@@ -314,7 +314,7 @@ export default function TikTokMonetizationRequirementsPage() {
         </Card>
 
         {/* FAQ */}
-        <FAQSection title="Frequently Asked Questions" faqs={faqs} />
+        <FAQSection pageName="TikTok Monetization Requirements" faqs={faqs} />
 
         {/* Related Guides */}
         <Card>

@@ -49,12 +49,12 @@ export default function MultiPlatformEarningsCalculatorPage() {
     }
   };
 
-  const handleViewChange = (platform: 'tiktok' | 'youtube' | 'instagram', value: number) => {
+  const handleViewChange = (platform: 'tiktok' | 'youtube' | 'instagram', value: string | number) => {
     setInputs((prev) => ({
       ...prev,
       monthlyViews: {
         ...prev.monthlyViews,
-        [platform]: value,
+        [platform]: typeof value === 'string' ? parseFloat(value) || 0 : value,
       },
     }));
   };

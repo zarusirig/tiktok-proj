@@ -220,7 +220,7 @@ export default function LifetimeValueCalculatorPage() {
                   <div className="flex items-center justify-between mb-2">
                     <span className="text-label-md text-neutral-700">Maximum CAC (at 3:1 ratio)</span>
                     <span className="text-heading-md font-semibold text-success-700">
-                      ${results.maxCAC.toFixed(2)}
+                      ${(results.ltv / 3).toFixed(2)}
                     </span>
                   </div>
                   <p className="text-body-xs text-neutral-600">You can spend up to this amount to acquire a customer profitably</p>

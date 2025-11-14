@@ -152,7 +152,7 @@ export default function HowMuchToChargeSponsorshipPage() {
           </div>
         </Card>
 
-        <FAQSection title="Pricing FAQs" faqs={faqs} />
+        <FAQSection pageName="Sponsorship Pricing" faqs={faqs} />
 
         <Card>
           <h3 className="text-heading-md font-semibold text-neutral-900 mb-4">Related Tools</h3>

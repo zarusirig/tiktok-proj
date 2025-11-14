@@ -526,7 +526,7 @@ export default function LiveGiftEarningsOptimizationPage() {
                 15. Building VIP Community
               </h3>
               <p className="text-body-sm text-neutral-700 mb-3">
-                Create exclusive community for regular gifters. Long-term loyalty > one-time large gifts.
+                Create exclusive community for regular gifters. Long-term loyalty {'>'}one-time large gifts.
               </p>
               <div className="space-y-3">
                 <div className="p-3 bg-white rounded">
